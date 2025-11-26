@@ -1,0 +1,48 @@
+# Models Directory
+
+This directory stores trained model files.
+
+## Saved Models
+
+After running the training script or notebook, the following models will be saved here:
+
+- `naive_bayes_model.joblib` - Multinomial Naive Bayes classifier
+- `svm_model.joblib` - Support Vector Machine classifier
+- `logistic_regression_model.joblib` - Logistic Regression classifier
+- `random_forest_model.joblib` - Random Forest classifier
+- `lstm_model.h5` - LSTM Neural Network model
+- `bert_model/` - BERT-based model directory
+- `tfidf_vectorizer.joblib` - TF-IDF vectorizer
+- `count_vectorizer.joblib` - Count vectorizer
+- `label_encoder.joblib` - Label encoder for sentiment classes
+
+## Usage
+
+To load a saved model:
+
+```python
+import joblib
+
+# Load traditional ML models
+model = joblib.load('models/naive_bayes_model.joblib')
+vectorizer = joblib.load('models/tfidf_vectorizer.joblib')
+
+# For predictions
+text = "Your technician feedback text here"
+text_vectorized = vectorizer.transform([text])
+prediction = model.predict(text_vectorized)
+```
+
+## Training Models
+
+Run the training script to generate all models:
+
+```bash
+python scripts/train_models.py
+```
+
+Or execute the Jupyter notebook:
+
+```bash
+jupyter notebook notebooks/sentiment_analysis_presentation.ipynb
+```
