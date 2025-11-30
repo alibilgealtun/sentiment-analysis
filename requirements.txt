@@ -21,6 +21,7 @@ streamlit>=1.28.0
 tensorflow>=2.13.0
 transformers>=4.30.0
 torch>=2.0.0
+datasets>=2.14.0
 
 # Jupyter
 jupyter>=1.0.0

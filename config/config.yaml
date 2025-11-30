@@ -5,12 +5,20 @@
 random_seed: 42
 
 # Data settings
+# You can change these values to use different datasets
 data:
+  # Path to your CSV dataset (can be changed to any CSV file)
   file_path: "data/technician_feedback.csv"
+
+  # Column names in your dataset (customize based on your CSV structure)
   text_column: "feedback_text"
   label_column: "sentiment"
+
+  # Train/test split configuration
   test_size: 0.2
   validation_size: 0.1
+
+  # Number of samples for generated dataset (only used when generating)
   n_samples: 500
 
 # Preprocessing settings

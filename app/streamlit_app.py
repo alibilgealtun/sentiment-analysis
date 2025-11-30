@@ -206,6 +206,42 @@ def main():
     # Sidebar
     st.sidebar.header("⚙️ Settings")
     
+    # Dataset selection
+    st.sidebar.markdown("### 📁 Dataset")
+
+    # List available datasets in data folder
+    data_dir = 'data'
+    available_datasets = []
+    if os.path.exists(data_dir):
+        available_datasets = [f for f in os.listdir(data_dir) if f.endswith('.csv')]
+
+    dataset_option = st.sidebar.radio(
+        "Select dataset source:",
+        ["Use existing dataset", "Upload new dataset"]
+    )
+
+    selected_dataset = None
+    uploaded_dataset = None
+
+    if dataset_option == "Use existing dataset":
+        if available_datasets:
+            selected_dataset = st.sidebar.selectbox(
+                "Choose dataset:",
+                options=available_datasets,
+                index=available_datasets.index('technician_feedback.csv') if 'technician_feedback.csv' in available_datasets else 0
+            )
+        else:
+            st.sidebar.warning("No datasets found in data/ folder")
+    else:
+        uploaded_dataset = st.sidebar.file_uploader(
+            "Upload CSV file:",
+            type=['csv'],
+            key='sidebar_upload'
+        )
+
+    st.sidebar.markdown("---")
+    st.sidebar.markdown("### 🤖 Model Selection")
+
     selected_model = st.sidebar.selectbox(
         "Select Model",
         options=list(models.keys()),
@@ -381,34 +417,71 @@ def main():
     with tab4:
         st.markdown('<h2 class="sub-header">Interactive Word Cloud</h2>', unsafe_allow_html=True)
         
-        # Load dataset
-        if os.path.exists('data/technician_feedback.csv'):
-            df = pd.read_csv('data/technician_feedback.csv')
-            
-            sentiment_filter = st.selectbox(
-                "Select Sentiment",
-                options=['All', 'positive', 'negative', 'neutral']
-            )
-            
-            if sentiment_filter == 'All':
-                texts = df['feedback_text'].tolist()
-                title = "Word Cloud - All Sentiments"
+        # Determine which dataset to use
+        df_wordcloud = None
+
+        if dataset_option == "Use existing dataset" and selected_dataset:
+            dataset_path = os.path.join(data_dir, selected_dataset)
+            if os.path.exists(dataset_path):
+                df_wordcloud = pd.read_csv(dataset_path)
+        elif dataset_option == "Upload new dataset" and uploaded_dataset:
+            df_wordcloud = pd.read_csv(uploaded_dataset)
+
+        if df_wordcloud is not None:
+            # Auto-detect text and sentiment columns
+            text_col = None
+            sentiment_col = None
+
+            for col in ['feedback_text', 'text', 'Text', 'comment', 'review']:
+                if col in df_wordcloud.columns:
+                    text_col = col
+                    break
+
+            for col in ['sentiment', 'label', 'Sentiment', 'Label', 'class']:
+                if col in df_wordcloud.columns:
+                    sentiment_col = col
+                    break
+
+            if text_col and sentiment_col:
+                # Get unique sentiments
+                unique_sentiments = df_wordcloud[sentiment_col].unique().tolist()
+                sentiment_options = ['All'] + unique_sentiments
+
+                sentiment_filter = st.selectbox(
+                    "Select Sentiment",
+                    options=sentiment_options
+                )
+
+                if sentiment_filter == 'All':
+                    texts = df_wordcloud[text_col].tolist()
+                    title = "Word Cloud - All Sentiments"
+                else:
+                    texts = df_wordcloud[df_wordcloud[sentiment_col] == sentiment_filter][text_col].tolist()
+                    title = f"Word Cloud - {sentiment_filter.title()} Sentiment"
+
+                # Preprocess texts
+                processed_texts = [preprocessor.full_preprocess(t) for t in texts if pd.notna(t)]
+
+                if processed_texts:
+                    fig = create_wordcloud(processed_texts, title)
+                    st.pyplot(fig)
+                    plt.close(fig)
+                else:
+                    st.warning("No texts found for selected sentiment.")
+            elif text_col:
+                st.info(f"Found text column '{text_col}' but no sentiment column. Showing all text.")
+                texts = df_wordcloud[text_col].tolist()
+                processed_texts = [preprocessor.full_preprocess(t) for t in texts if pd.notna(t)]
+
+                if processed_texts:
+                    fig = create_wordcloud(processed_texts, "Word Cloud")
+                    st.pyplot(fig)
+                    plt.close(fig)
             else:
-                texts = df[df['sentiment'] == sentiment_filter]['feedback_text'].tolist()
-                title = f"Word Cloud - {sentiment_filter.title()} Sentiment"
-            
-            # Preprocess texts
-            processed_texts = [preprocessor.full_preprocess(t) for t in texts]
-            
-            if processed_texts:
-                fig = create_wordcloud(processed_texts, title)
-                st.pyplot(fig)
-                plt.close(fig)
-            else:
-                st.warning("No texts found for selected sentiment.")
+                st.error("Could not find text column. Please ensure your dataset has a column named 'feedback_text', 'text', or similar.")
         else:
-            st.info("Dataset not found. Generate it using the data generator.")
-    
+            st.info("Please select or upload a dataset to generate word cloud.")
+
     # Footer
     st.markdown("---")
     st.markdown(

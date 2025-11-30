@@ -13,6 +13,7 @@ Author: Sentiment Analysis Team
 
 import os
 import sys
+import argparse
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -47,6 +48,47 @@ from src.utils import (
 
 def main():
     """Main function to train all models."""
+    # Parse command-line arguments
+    parser = argparse.ArgumentParser(description='Train sentiment analysis models')
+    parser.add_argument(
+        '--data-path',
+        type=str,
+        default='data/technician_feedback.csv',
+        help='Path to the CSV file containing the dataset'
+    )
+    parser.add_argument(
+        '--train-data-path',
+        type=str,
+        help='Optional explicit training CSV path (overrides --data-path)'
+    )
+    parser.add_argument(
+        '--test-data-path',
+        type=str,
+        help='Optional explicit test CSV path'
+    )
+    parser.add_argument(
+        '--text-col',
+        type=str,
+        default='feedback_text',
+        help='Name of the text column in the CSV file'
+    )
+    parser.add_argument(
+        '--label-col',
+        type=str,
+        default='sentiment',
+        help='Name of the label column in the CSV file'
+    )
+    parser.add_argument(
+        '--generate',
+        action='store_true',
+        help='Generate default dataset if file not found'
+    )
+
+    args = parser.parse_args()
+
+    train_path = args.train_data_path or args.data_path
+    test_path = args.test_data_path
+
     # Set random seeds for reproducibility
     set_random_seeds(42)
     
@@ -58,14 +100,21 @@ def main():
     
     # Step 1: Load or generate data
     print("Step 1: Loading data...")
-    data_path = 'data/technician_feedback.csv'
-    
-    if not os.path.exists(data_path):
-        print("Dataset not found. Generating new dataset...")
-        df = generate_technician_feedback(n_samples=550, random_seed=42)
-        df.to_csv(data_path, index=False)
-    
-    df, texts, labels = load_data(data_path)
+    print(f"Dataset path: {train_path}")
+    print(f"Text column: {args.text_col}")
+    print(f"Label column: {args.label_col}")
+
+    if not os.path.exists(train_path):
+        if args.generate and train_path == 'data/technician_feedback.csv':
+            print("Dataset not found. Generating new dataset...")
+            df = generate_technician_feedback(n_samples=550, random_seed=42)
+            df.to_csv(train_path, index=False)
+        else:
+            print(f"Error: Dataset not found at {train_path}")
+            print("Use --generate flag to generate default dataset, or provide a valid path.")
+            sys.exit(1)
+
+    df, texts, labels = load_data(train_path, text_column=args.text_col, label_column=args.label_col)
     print(f"\nLoaded {len(texts)} samples")
     
     # Step 2: Preprocess text
@@ -89,15 +138,32 @@ def main():
     
     # Save vectorizer
     save_model(tfidf.vectorizer, 'models/tfidf_vectorizer.joblib')
-    
-    # Step 4: Split data
-    print("\nStep 4: Splitting data...")
-    X_train, X_test, y_train, y_test = train_test_split(
-        X, labels, test_size=0.2, random_state=42, stratify=labels
-    )
-    print(f"Training set: {X_train.shape[0]} samples")
-    print(f"Test set: {X_test.shape[0]} samples")
-    
+
+    if test_path:
+        if not os.path.exists(test_path):
+            print(f"Error: Test dataset not found at {test_path}")
+            sys.exit(1)
+        test_df, test_texts, test_labels = load_data(test_path, text_column=args.text_col, label_column=args.label_col)
+        processed_test_texts = preprocessor.preprocess_batch(test_texts)
+        X_train = X
+        y_train = labels
+        X_test = tfidf.transform(processed_test_texts)
+        y_test = test_labels
+        split_info = f"Using provided test dataset ({test_path})"
+    else:
+        print("\nStep 4: Splitting data...")
+        X_train, X_test, y_train, y_test = train_test_split(
+            X, labels, test_size=0.2, random_state=42, stratify=labels
+        )
+        split_info = "Performing random 80/20 split"
+        print(f"Training set: {X_train.shape[0]} samples")
+        print(f"Test set: {X_test.shape[0]} samples")
+
+    print(f"\nSplit strategy: {split_info}")
+
+    if test_path:
+        print(f"Training set: {X_train.shape[0]} samples")
+        print(f"Test set: {X_test.shape[0]} samples")
     # Step 5: Train models
     print("\nStep 5: Training models...")
     models = {
@@ -120,7 +186,8 @@ def main():
         
         print(f"  Accuracy: {metrics['accuracy']:.4f}")
         print(f"  F1-Score: {metrics['f1_score']:.4f}")
-        
+        if test_path:
+            print("  Evaluation used external test dataset")
         # Save model
         model_filename = name.lower().replace(' ', '_')
         model.save(f'models/{model_filename}_model.joblib')
@@ -146,7 +213,9 @@ def main():
     results_df = pd.DataFrame(results).T
     results_df.to_csv('models/model_results.csv')
     print("\nResults saved to models/model_results.csv")
-    
+    if test_path:
+        print("Test metrics reflect external dataset inputs.")
+
     print_section_header("Training Complete!")
     print("All models saved to models/ directory")
     print("\nTo use a model for prediction:")

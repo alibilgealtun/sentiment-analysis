@@ -87,6 +87,15 @@ sentiment-analysis/
 
 ## 📖 Usage
 
+### Quick Start with Custom Datasets
+
+**NEW**: You can now use your own datasets! See [CUSTOM_DATASETS.md](CUSTOM_DATASETS.md) for detailed instructions.
+
+```bash
+# Train with your dataset
+python run_training.py --dataset path/to/your/data.csv --text-col review --label-col sentiment --evaluate
+```
+
 ### 1. Generate Dataset
 
 The dataset is pre-generated, but you can regenerate it:
@@ -103,7 +112,11 @@ save_dataset(df, 'data/technician_feedback.csv')
 Run the training script to train all models:
 
 ```bash
+# Default dataset
 python scripts/train_models.py
+
+# Custom dataset
+python scripts/train_models.py --data-path data/your_data.csv --text-col review --label-col sentiment
 ```
 
 This will:
@@ -117,7 +130,11 @@ This will:
 Run comprehensive evaluation:
 
 ```bash
+# Default dataset
 python scripts/evaluate_models.py
+
+# Custom dataset
+python scripts/evaluate_models.py --data-path data/your_data.csv --text-col review --label-col sentiment
 ```
 
 This generates:
@@ -135,6 +152,7 @@ streamlit run app/streamlit_app.py
 ```
 
 Features:
+- **Dataset selection**: Choose from available datasets or upload your own
 - Real-time sentiment prediction
 - Model selection dropdown
 - Batch prediction (CSV upload)

@@ -13,6 +13,7 @@ Author: Sentiment Analysis Team
 
 import os
 import sys
+import argparse
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -47,6 +48,36 @@ from src.utils import (
 
 def main():
     """Main function to evaluate all models."""
+    # Parse command-line arguments
+    parser = argparse.ArgumentParser(description='Evaluate sentiment analysis models')
+    parser.add_argument(
+        '--data-path',
+        type=str,
+        default='data/technician_feedback.csv',
+        help='Path to the CSV file containing the dataset'
+    )
+    parser.add_argument(
+        '--test-data-path',
+        type=str,
+        help='Optional explicit test CSV path (skips internal split)'
+    )
+    parser.add_argument(
+        '--text-col',
+        type=str,
+        default='feedback_text',
+        help='Name of the text column in the CSV file'
+    )
+    parser.add_argument(
+        '--label-col',
+        type=str,
+        default='sentiment',
+        help='Name of the label column in the CSV file'
+    )
+
+    args = parser.parse_args()
+
+    test_path = args.test_data_path
+
     # Set random seeds for reproducibility
     set_random_seeds(42)
     
@@ -57,8 +88,16 @@ def main():
     
     # Step 1: Load data
     print("Step 1: Loading data...")
-    df, texts, labels = load_data('data/technician_feedback.csv')
-    
+    print(f"Dataset path: {args.data_path}")
+    print(f"Text column: {args.text_col}")
+    print(f"Label column: {args.label_col}")
+
+    if not os.path.exists(args.data_path):
+        print(f"Error: Dataset not found at {args.data_path}")
+        sys.exit(1)
+
+    df, texts, labels = load_data(args.data_path, text_column=args.text_col, label_column=args.label_col)
+
     # Step 2: Preprocess text
     print("\nStep 2: Preprocessing text...")
     preprocessor = TextPreprocessor()
@@ -68,12 +107,22 @@ def main():
     print("\nStep 3: Loading vectorizer and transforming data...")
     vectorizer = load_model('models/tfidf_vectorizer.joblib')
     X = vectorizer.transform(processed_texts)
-    
-    # Split data (same split as training)
-    _, X_test, _, y_test = train_test_split(
-        X, labels, test_size=0.2, random_state=42, stratify=labels
-    )
-    
+    if test_path:
+        if not os.path.exists(test_path):
+            print(f"Error: Test dataset not found at {test_path}")
+            sys.exit(1)
+        test_df, test_texts, test_labels = load_data(test_path, text_column=args.text_col, label_column=args.label_col)
+        processed_test_texts = preprocessor.preprocess_batch(test_texts)
+        X_test = vectorizer.transform(processed_test_texts)
+        y_test = test_labels
+        print(f"Using provided test dataset ({test_path}) for evaluation.")
+    else:
+        # Split data (same split as training)
+        _, X_test, _, y_test = train_test_split(
+            X, labels, test_size=0.2, random_state=42, stratify=labels
+        )
+        print("Using internal 80/20 split for evaluation.")
+
     # Step 4: Load and evaluate models
     print("\nStep 4: Evaluating models...")
     
@@ -112,7 +161,9 @@ def main():
             # Print classification report
             print(f"\n{name} Classification Report:")
             print(get_classification_report(y_test, y_pred))
-            
+            if test_path:
+                print("Evaluation based on provided test dataset.")
+
             # Plot confusion matrix
             fig = plot_confusion_matrix(
                 y_test, y_pred,
@@ -168,6 +219,8 @@ def main():
     print("  - outputs/model_comparison.png")
     print("  - outputs/*_confusion_matrix.png")
     print("  - outputs/best_model_roc_curves.png")
+    if test_path:
+        print("Results reflect your provided test dataset.")
 
 
 if __name__ == "__main__":

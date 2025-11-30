@@ -13,7 +13,8 @@ import numpy as np
 import joblib
 
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.svm import SVC
+from sklearn.svm import SVC, LinearSVC
+from sklearn.calibration import CalibratedClassifierCV
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier as SklearnRandomForest
 from sklearn.model_selection import GridSearchCV, cross_val_score
@@ -230,6 +231,15 @@ class SVMClassifier(BaseSentimentClassifier):
         Regularization parameter.
     probability : bool, default=True
         Whether to enable probability estimates.
+    max_iter : int, default=5000
+        Maximum iterations for the underlying solver.
+    backend : str, default='auto'
+        'svc' to force sklearn.svm.SVC, 'linear_svc' for LinearSVC, 'auto' picks
+        LinearSVC when kernel='linear'.
+    calibration_cv : int, default=3
+        Number of folds for probability calibration when using LinearSVC.
+    linear_dual : Optional[bool], default=None
+        Allows forcing the LinearSVC dual formulation; None auto-selects.
     
     Examples
     --------
@@ -242,21 +252,65 @@ class SVMClassifier(BaseSentimentClassifier):
         self,
         kernel: str = 'rbf',
         C: float = 1.0,
-        probability: bool = True
+        probability: bool = True,
+        max_iter: int = 5000,
+        backend: str = 'auto',
+        calibration_cv: int = 3,
+        linear_dual: Optional[bool] = None
     ):
         super().__init__()
         self.kernel = kernel
         self.C = C
         self.probability = probability
-        self.model = SVC(
-            kernel=kernel,
-            C=C,
-            probability=probability,
-            random_state=42
+        self.max_iter = max_iter
+        self.backend = backend
+        self.calibration_cv = calibration_cv
+        self.linear_dual = linear_dual
+        self.active_backend = None
+        self.model = None
+    
+    def _resolve_backend(self) -> str:
+        if self.backend != 'auto':
+            return self.backend
+        return 'linear_svc' if self.kernel == 'linear' else 'svc'
+    
+    def _should_use_dual(self, X_shape: Optional[Tuple[int, int]]) -> bool:
+        if self.linear_dual is not None:
+            return self.linear_dual
+        if not X_shape:
+            return True
+        n_samples, n_features = X_shape
+        return n_samples < n_features
+    
+    def _create_model(self, X=None):
+        backend = self._resolve_backend()
+        self.active_backend = backend
+        if backend == 'linear_svc':
+            dual_flag = self._should_use_dual(X.shape if X is not None else None)
+            base_model = LinearSVC(
+                C=self.C,
+                max_iter=self.max_iter,
+                dual=dual_flag
+            )
+            if self.probability:
+                return CalibratedClassifierCV(
+                    base_model,
+                    cv=self.calibration_cv,
+                    method='sigmoid'
+                )
+            return base_model
+        return SVC(
+            kernel=self.kernel,
+            C=self.C,
+            probability=self.probability,
+            random_state=42,
+            max_iter=self.max_iter
         )
     
     def fit(self, X, y) -> 'SVMClassifier':
         """Train the SVM model."""
+        if self.model is None:
+            self.model = self._create_model(X)
         self.classes_ = np.unique(y)
         self.label_encoder.fit(y)
         y_encoded = self.label_encoder.transform(y)

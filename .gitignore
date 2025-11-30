@@ -186,3 +186,5 @@ models/*.joblib
 models/*.h5
 models/*.csv
 models/bert_model/
+/.idea
+/scripts/models
