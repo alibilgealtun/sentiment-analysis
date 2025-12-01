@@ -1,4 +1,4 @@
-id,feedback_text,sentiment,category,timestamp
+id,text,label,category,timestamp
 1,Safety equipment locations confirmed,neutral,safety,2025-03-28 04:48:50
 2,"Honestly, strategic direction is clearly communicated",positive,management,2025-10-12 21:24:50
 3,"Overall, project timelines are realistic and achievable",positive,workload,2025-10-04 15:53:50
@@ -549,3 +549,1037 @@ id,feedback_text,sentiment,category,timestamp
 548,Work distribution reviewed,neutral,workload,2024-12-13 14:54:50
 549,The certification prep course was comprehensive,positive,training,2025-05-01 13:55:50
 550,Diagnostic equipment gives inconsistent readings,negative,equipment,2025-02-21 03:50:50
+id,feedback_text,sentiment,category,timestamp
+551,Replaced the primary seal on the hydraulic pump. Pressure is holding steady at 1200 psi now.,Positive,Maintenance,2025-11-28 08:15:00
+552,The tablet interface is lagging significantly when loading the schematic diagrams. It wastes about 10 minutes per job.,Negative,Software,2025-11-28 09:30:45
+553,Routine inspection of Unit 4 completed. No anomalies detected.,Neutral,Inspection,2025-11-28 10:05:12
+554,We are running critically low on 12mm bolts in the storeroom. Please restock ASAP.,Negative,Supply Chain,2025-11-28 10:45:33
+555,Great update on the diagnostic tool. The auto-calibrate feature saved me an hour today.,Positive,Software,2025-11-28 11:20:00
+556,Found an oil slick near the generator room entrance. Cleaned it up but we need to check the overhead pipes for leaks.,Negative,Safety,2025-11-28 13:10:55
+557,Calibration of the temperature sensors is complete. Values are within the green zone.,Positive,Maintenance,2025-11-28 14:00:22
+558,The wiring diagram provided for the X-200 model is outdated. It doesn't match the actual panel layout.,Negative,Documentation,2025-11-28 14:45:10
+559,Shift handover completed. All pending tickets from the morning are closed.,Neutral,Administrative,2025-11-28 16:00:00
+560,Noise levels in the compressor room are exceeding 85dB. We need better ear protection or soundproofing.,Negative,Safety,2025-11-29 08:10:30
+561,Successfully patched the firmware on the HMI. The touch response is much better now.,Positive,Maintenance,2025-11-29 09:25:44
+562,Requesting a replacement for my multimeter. The display is flickering and giving inconsistent readings.,Negative,Equipment,2025-11-29 10:15:18
+563,Preventive maintenance on the cooling tower scheduled for next Tuesday.,Neutral,Scheduling,2025-11-29 11:00:00
+564,The vendor sent the wrong filter type again. We ordered HEPA, they sent standard mesh.,Negative,Supply Chain,2025-11-29 11:45:20
+565,Fixed the alignment issue on the conveyor belt. Production line speed is back to 100%.,Positive,Maintenance,2025-11-29 13:30:05
+566,Network connection in the basement is non-existent. I can't upload logs without walking back upstairs.,Negative,Infrastructure,2025-11-29 14:15:50
+567,Training for the new safety protocol was clear and helpful. Feel much more confident handling the chem-spills.,Positive,Training,2025-11-29 15:10:12
+568,Logged the meter readings for the auxiliary power unit.,Neutral,Monitoring,2025-11-30 08:05:00
+569,The locking mechanism on the emergency exit door is jamming. This is a major violation.,Negative,Safety,2025-11-30 08:55:33
+570,Finally fixed the intermittent electrical fault in the server room AC. It was a loose neutral wire.,Positive,Maintenance,2025-11-30 10:40:21
+571,Hydraulic fluid levels checked. All within normal operating range.,Neutral,Inspection,2025-11-30 11:15:00
+572,The new wrench set is excellent. The grip is much better for tight spaces.,Positive,Equipment,2025-11-30 12:30:45
+573,Software crashed three times while trying to submit the daily report. Very frustrating.,Negative,Software,2025-11-30 13:20:10
+574,Replaced the worn-out belt on Drive Motor 3. Operational test successful.,Positive,Maintenance,2025-11-30 14:05:55
+575,Warning light on the control panel is blinking yellow. Investigating potential sensor drift.,Neutral,Investigation,2025-11-30 15:00:00
+576,The ladder in Sector 7 is wobbly and missing a rubber foot. Needs immediate replacement.,Negative,Safety,2025-12-01 08:10:15
+577,Inventory count completed for the electrical supply cabinet.,Neutral,Administrative,2025-12-01 09:00:00
+578,Fixed the leak in the cooling system. System pressure is stable at 45 PSI.,Positive,Maintenance,2025-12-01 09:45:30
+579,The app doesn't save photos in offline mode. I lost all my documentation from the tunnel inspection.,Negative,Software,2025-12-01 10:30:20
+580,Lubricated all moving parts on the assembly arm. Motion is smooth and quiet.,Positive,Maintenance,2025-12-01 11:15:50
+581,Still waiting for the replacement circuit board ordered two weeks ago. Machine is idle.,Negative,Supply Chain,2025-12-01 13:00:05
+582,Verified the voltage output of the backup generator. Stable at 240V.,Neutral,Inspection,2025-12-01 13:45:00
+583,The new LED lighting installed in the workshop is a huge improvement. Much easier to see small components.,Positive,Infrastructure,2025-12-01 14:30:40
+584,Detected a gas smell near the main valve. Evacuated the area and called the emergency team.,Negative,Safety,2025-12-01 15:10:00
+585,Cleaned the intake filters on Unit 1 and Unit 2.,Neutral,Maintenance,2025-12-02 08:20:10
+586,The user manual for the new drill press is missing pages 10-15.,Negative,Documentation,2025-12-02 09:05:33
+587,Repaired the broken latch on the safety gate. It closes securely now.,Positive,Safety,2025-12-02 09:50:15
+588,Diagnostic software failed to connect to the ECU. Keep getting 'Connection Timeout' error.,Negative,Software,2025-12-02 10:40:00
+589,Tightened the loose mounting bolts on the vibration dampener.,Positive,Maintenance,2025-12-02 11:25:45
+590,Monthly fire extinguisher check completed. All tags updated.,Neutral,Inspection,2025-12-02 13:00:00
+591,The ergonomic mats provided for the standing stations are very comfortable. Back pain is gone.,Positive,Health,2025-12-02 13:50:20
+592,Water pressure in the washdown station is too low to clean the equipment effectively.,Negative,Infrastructure,2025-12-02 14:35:10
+593,Replaced the fused bulb in the control room dashboard.,Neutral,Maintenance,2025-12-02 15:15:00
+594,The safety goggles supplied scratch way too easily. Can we switch brands?,Negative,Equipment,2025-12-03 08:10:00
+595,Successfully integrated the new sensor array. Data transmission is instant.,Positive,Maintenance,2025-12-03 09:00:30
+596,Noticed corrosion on the battery terminals of the forklift. Needs cleaning.,Neutral,Inspection,2025-12-03 09:45:00
+597,The ticket system is down again. I have to write everything on paper.,Negative,Software,2025-12-03 10:30:50
+598,Adjusted the tension on the drive chain. It's running perfectly now.,Positive,Maintenance,2025-12-03 11:15:20
+599,Spare parts request for the quarterly overhaul submitted.,Neutral,Administrative,2025-12-03 13:00:15
+600,The floor in the chemical storage area is slippery. Anti-slip coating has worn off.,Negative,Safety,2025-12-03 13:45:00
+601,Upgraded the OS on the control PC. Boot time is significantly faster.,Positive,Software,2025-12-03 14:30:45
+602,Cannot locate the specialized torx driver. Is it in another technician's kit?,Negative,Equipment,2025-12-03 15:15:30
+603,Readings from the flow meter recorded in the logbook.,Neutral,Monitoring,2025-12-04 08:05:10
+604,The noise from the HVAC vent is distracting. Sounds like a loose fan blade.,Negative,Infrastructure,2025-12-04 08:50:00
+605,Solved the overheating issue on the server. Added an extra exhaust fan and temps dropped 10 degrees.,Positive,Maintenance,2025-12-04 09:35:25
+606,Routine visual inspection of the external piping. Rust spots noted on section B.,Neutral,Inspection,2025-12-04 10:20:00
+607,The new update removed the search bar from the inventory page. It takes forever to find parts now.,Negative,Software,2025-12-04 11:05:40
+608,Refilled the coolant reservoir. Level is now at max.,Neutral,Maintenance,2025-12-04 13:00:00
+609,Great job on the new tool organization system. Finding things is so much faster.,Positive,Administrative,2025-12-04 13:45:15
+610,The emergency stop button on Line 3 feels sticky. It might not engage properly.,Negative,Safety,2025-12-04 14:30:50
+611,Replaced the faulty capacitor on the motherboard. Unit powered up immediately.,Positive,Maintenance,2025-12-04 15:15:30
+612,Scheduled downtime for firmware upgrade on Friday.,Neutral,Scheduling,2025-12-05 08:10:00
+613,There is no internet signal in the West Wing. Impossible to access cloud manuals.,Negative,Infrastructure,2025-12-05 09:00:20
+614,The new high-torque drill made the installation job a breeze.,Positive,Equipment,2025-12-05 09:45:55
+615,Observed minor vibrations in the turbine shaft. Recommend monitoring.,Neutral,Investigation,2025-12-05 10:30:00
+616,We are out of size Medium gloves. Only XL left, which is a safety risk for some of us.,Negative,Supply Chain,2025-12-05 11:15:40
+617,Fixed the broken hinge on the cabinet door. Works like new.,Positive,Maintenance,2025-12-05 13:00:10
+618,Log files downloaded and archived for weekly backup.,Neutral,Administrative,2025-12-05 13:45:30
+619,The instruction video for the new machine buffers constantly. Can't watch it.,Negative,Training,2025-12-05 14:30:00
+620,Calibrated the pH sensors in the water treatment plant. Readings are accurate.,Positive,Maintenance,2025-12-05 15:15:25
+621,Checked the thermostat settings in the warehouse.,Neutral,Inspection,2025-12-06 08:20:00
+622,The ventilation in the soldering room is inadequate. Fumes are building up.,Negative,Safety,2025-12-06 09:05:45
+623,Successfully recovered the corrupt data from the hard drive. Nothing was lost.,Positive,IT,2025-12-06 09:50:30
+624,The heavy-duty lift is making a grinding noise when lowering.,Negative,Equipment,2025-12-06 10:35:10
+625,Daily tool check completed. All items accounted for.,Neutral,Administrative,2025-12-06 11:20:00
+626,The new automated alert system is fantastic. Caught a pressure spike before it became a problem.,Positive,Software,2025-12-06 13:00:50
+627,Incorrect part number listed in the database for the 5mm screw. Caused a re-order delay.,Negative,Documentation,2025-12-06 13:45:20
+628,Greased the bearings on the main axle.,Neutral,Maintenance,2025-12-06 14:30:00
+629,Repaired the cut wire in the sensor harness. Signal restored.,Positive,Maintenance,2025-12-06 15:15:45
+630,The path to the breaker box is blocked by pallets. Fire hazard.,Negative,Safety,2025-12-07 08:10:30
+631,Weekly battery load test completed. Results logged.,Neutral,Inspection,2025-12-07 09:00:00
+632,The new lightweight helmets are much more comfortable for long shifts.,Positive,Equipment,2025-12-07 09:45:20
+633,The scanner battery dies after only 2 hours. Needs replacement.,Negative,Equipment,2025-12-07 10:30:50
+634,Swapped out the defective logic board. System is back online.,Positive,Maintenance,2025-12-07 11:15:30
+635,Waiting for approval to shut down Line 2 for repairs.,Neutral,Administrative,2025-12-07 13:00:00
+636,The error messages on the new panel are in German. Can we get an English language pack?,Negative,Software,2025-12-07 13:45:45
+637,Cleaned and recalibrated the optical lens. Image clarity is perfect now.,Positive,Maintenance,2025-12-07 14:30:10
+638,Recorded ambient temperature and humidity levels.,Neutral,Monitoring,2025-12-07 15:15:00
+639,The designated walkway is poorly lit. Hard to see tripping hazards.,Negative,Safety,2025-12-08 08:20:20
+640,Replaced the worn brake pads on the transporter. Braking distance is much safer now.,Positive,Maintenance,2025-12-08 09:05:50
+641,Routine check of the fire alarm system. All zones active.,Neutral,Inspection,2025-12-08 09:50:00
+642,The coffee machine in the breakroom is broken again. Morale is dropping.,Negative,Infrastructure,2025-12-08 10:35:15
+643,The remote access tool is working smoothly. Fixed the software issue from home.,Positive,Software,2025-12-08 11:20:40
+644,Missing the specialized key for the secure cabinet. Can't access the spare drives.,Negative,Access,2025-12-08 13:00:30
+645,Tightened the flange bolts to spec torque.,Neutral,Maintenance,2025-12-08 13:45:00
+646,The new safety gloves offer great dexterity. I can handle small screws easily.,Positive,Equipment,2025-12-08 14:30:55
+647,Server room AC unit is leaking water onto the floor.,Negative,Infrastructure,2025-12-08 15:15:20
+648,Completed the end-of-shift report.,Neutral,Administrative,2025-12-08 16:00:00
+649,Replaced the cracked screen on the control panel. Touch functionality restored.,Positive,Maintenance,2025-12-09 08:10:10
+650,The barcode reader fails to scan 1 out of 5 times. slows down the workflow.,Negative,Equipment,2025-12-09 09:00:40
+651,"The recent training session was insightful and has significantly improved my understanding of the new software. I appreciate the effort put into it.",positive,Training,2023-04-10 12:30:00
+652,"I had an issue with a customer's equipment yesterday. The support team was prompt and resolved it efficiently. Excellent job!",positive,Customer Service,2023-04-09 16:00:00
+653,"I encountered a minor glitch in the system today that caused some inconvenience to a customer. I apologize for any disruption and will take steps to prevent such issues in the future.",negative,Equipment,2023-04-08 10:15:00
+654,"I'd like to express my gratitude for the new tools provided to us. They have streamlined our workflow and increased productivity.",positive,Tools,2023-04-07 15:45:00
+656,"New diagnostic software update is fantastic. It's way faster than the old version and the UI is much cleaner.",Positive,Software,2023-10-24T09:45:12Z
+657,"Finished the routine maintenance on the generator. No major issues found, just replaced the filters and topped off fluids.",Neutral,Maintenance,2023-10-24T11:00:00Z
+658,"I'm concerned about the lighting in the rear warehouse. It's too dim back there when we are trying to read part numbers on the high shelves.",Negative,Safety,2023-10-24T13:22:45Z
+659,"Just wanted to say the new tablet cases are great. They are much more rugged and easier to hold onto with greasy gloves.",Positive,Equipment,2023-10-24T14:50:10Z
+660,"Inventory count for the electrical wiring kits seems off in the system. I counted 15 physically but the system says 24. Please investigate.",Neutral,Workflow,2023-10-24T16:10:05Z
+661,"The login process for the time-tracking app is glitching. It keeps kicking me out every hour.",Negative,Software,2023-10-25T07:30:22Z
+662,"Completed the calibration on Unit 404. All parameters are within normal operating ranges now.",Neutral,Maintenance,2023-10-25T10:15:44Z
+663,"Can we get more of the heavy-duty hand cleanser? The standard stuff isn't cutting it for the oil and grease we deal with.",Negative,Supplies,2023-10-25T12:05:30Z
+664,"Great training session on the new safety protocols this morning. Clear and to the point.",Positive,Training,2023-10-25T13:45:18Z
+665,"The HVAC in the break room is blowing hot air. It's unbearable in there during lunch.",Negative,Facility,2023-10-25T15:30:00Z
+666,"Successfully installed the new conveyer belt motor. Test run was smooth, noise levels are down significantly.",Positive,Maintenance,2023-10-26T08:45:55Z
+667,"Part requisition #9921 is still pending approval. I can't finish the job on the compressor without it.",Negative,Workflow,2023-10-26T09:20:10Z
+668,"Noticed a small oil leak on the forklift near the charging station. Tagged it out for repair.",Neutral,Safety,2023-10-26T11:10:35Z
+669,"The updated schematics for the X-200 model are missing page 4. I had to find a physical manual to finish the job.",Negative,Documentation,2023-10-26T14:00:25Z
+670,"Wi-Fi signal in the north wing is practically non-existent today. Can't upload the service logs.",Negative,IT Infrastructure,2023-10-27T08:05:12Z
+671,"Customer was extremely happy with the quick turnaround on their emergency repair. Good team effort.",Positive,Customer Service,2023-10-27T09:30:00Z
+672,"We need to order more 10mm sockets. I think they are disappearing into the void again.",Neutral,Supplies,2023-10-27T10:45:33Z
+673,"The new safety goggles fog up way too easily. It's actually becoming a hazard because I have to keep taking them off to wipe them.",Negative,Safety,2023-10-27T13:15:20Z
+674,"Refilled the coolant tanks on the main CNC machine. Levels are stable.",Neutral,Maintenance,2023-10-27T15:50:45Z
+675,"Why is the coffee machine always broken on Mondays? It's a morale killer.",Negative,Facility,2023-10-30T07:55:10Z
+676,"The automated scheduling tool assigned me three jobs in different cities for the same morning. This needs a logic fix.",Negative,Software,2023-10-30T08:30:22Z
+677,"Installation of the solar array on the roof is 80% complete. Weather is holding up well.",Neutral,Project Update,2023-10-30T11:20:15Z
+678,"Really appreciate the new ergonomic mats at the assembly stations. My back feels much better.",Positive,Facility,2023-10-30T14:40:05Z
+679,"The noise from the construction next door is distracting. Can we get some better soundproofing or headphones?",Negative,Environment,2023-10-30T16:10:30Z
+680,"Updated firmware on the security cameras. All feeds are clear and recording properly.",Neutral,Maintenance,2023-10-31T09:00:00Z
+681,"I'm running low on cable ties and electrical tape. Adding to the weekly order list.",Neutral,Supplies,2023-10-31T10:25:44Z
+682,"The new guy, Mike, is picking things up really fast. He handled that complex wiring harness perfectly.",Positive,Team,2023-10-31T13:55:12Z
+683,"My laptop battery barely lasts an hour now. I need a replacement or a new unit.",Negative,Equipment,2023-10-31T15:15:30Z
+684,"Routine inspection of the fire extinguishers complete. All tags updated.",Neutral,Safety,2023-11-01T08:10:22Z
+685,"The documentation for the legacy systems is a mess. Half the links in the PDF don't work.",Negative,Documentation,2023-11-01T09:45:50Z
+686,"Cleaned up the spill in sector 4. Area is dry and safe now.",Neutral,Safety,2023-11-01T11:30:15Z
+687,"Love the new vending machine options. Finally some healthy snacks!",Positive,Facility,2023-11-01T12:45:00Z
+688,"The printer in the office is jamming every time we try to print double-sided. Please fix.",Negative,Equipment,2023-11-01T14:20:35Z
+689,"Completed the valve replacement on the main water line. Pressure test passed.",Neutral,Maintenance,2023-11-02T08:30:10Z
+690,"It's freezing in the workshop today. Is the heater broken again?",Negative,Facility,2023-11-02T09:15:44Z
+691,"Great job on organizing the tool crib. It's so much easier to find the specialty wrenches now.",Positive,Organization,2023-11-02T11:05:22Z
+692,"Vehicle 05 needs a tire rotation. Treads are wearing unevenly.",Neutral,Maintenance,2023-11-02T13:40:55Z
+693,"The mobile app keeps crashing when I try to attach photos to the report. It's very frustrating.",Negative,Software,2023-11-02T15:50:30Z
+694,"Attended the vendor demo for the new analyzers. They look promising, very high precision.",Positive,Equipment,2023-11-03T09:10:15Z
+695,"We are out of blue Cat6 cables. Only have the grey ones left.",Neutral,Supplies,2023-11-03T10:30:40Z
+696,"The floor in the loading dock is getting slippery when it rains. We need better drainage or non-slip coating.",Negative,Safety,2023-11-03T13:00:00Z
+697,"Swapped out the bad hard drive in the server. restoring data from backup now.",Neutral,IT Support,2023-11-03T14:45:22Z
+698,"The new uniform shirts are really stiff and uncomfortable. Can we go back to the cotton blend?",Negative,Supplies,2023-11-06T08:20:10Z
+699,"Customer called to thank us for fixing their AC before the weekend. Said the technician was very polite.",Positive,Customer Service,2023-11-06T09:55:30Z
+700,"Calibrated the pressure sensors on Line A. Variance is now less than 0.1%.",Neutral,Maintenance,2023-11-06T11:15:45Z
+701,"Why do we still use fax machines for these orders? It's 2023.",Negative,Workflow,2023-11-06T13:30:00Z
+702,"The step ladder in the storage room is wobbly. It's unsafe to use.",Negative,Safety,2023-11-06T15:10:25Z
+703,"Installed the new lighting fixtures in the conference room. Looks much better/brighter.",Positive,Facility,2023-11-07T08:40:12Z
+704,"Battery bank 2 is showing signs of degradation. Voltage drops rapidly under load.",Neutral,Maintenance,2023-11-07T10:05:55Z
+705,"The interface for the new CRM is intuitive. I figured it out without even reading the manual.",Positive,Software,2023-11-07T11:50:30Z
+706,"Traffic was terrible this morning, made me late to the first site. We might need to adjust the travel time estimates.",Negative,Logistics,2023-11-07T14:15:40Z
+707,"Replaced the fuse in the control panel. System is back online.",Neutral,Maintenance,2023-11-07T16:30:10Z
+708,"Can we get a better coffee maker? The current one takes forever to brew a pot.",Negative,Facility,2023-11-08T08:00:22Z
+709,"The training video buffering issues are resolved. Watching the modules now.",Neutral,Training,2023-11-08T09:30:45Z
+710,"Found a workaround for the software bug in the reporting module. Documented it in the wiki.",Positive,Problem Solving,2023-11-08T11:10:15Z
+711,"The rear door lock is jamming. Key gets stuck every time.",Negative,Facility,2023-11-08T13:45:30Z
+712,"Weekly fleet inspection completed. Truck #12 needs new wiper blades.",Neutral,Maintenance,2023-11-08T15:20:55Z
+713,"I really like the flexible hours policy. Helps a lot with dropping kids at school.",Positive,HR Policy,2023-11-09T08:15:10Z
+714,"The noise level in the server room is exceeding safe decibels. We need ear protection dispensed at the door.",Negative,Safety,2023-11-09T10:00:25Z
+715,"Restocked the first aid kits in all three zones.",Neutral,Safety,2023-11-09T11:45:40Z
+716,"The new handheld scanners are too heavy. My wrist hurts after a full shift of scanning.",Negative,Equipment,2023-11-09T14:30:00Z
+717,"Successfully migrated the database to the new server. No data loss.",Positive,IT Support,2023-11-09T16:10:12Z
+718,"There is a strange smell coming from the vent in the lab. Smells like burning plastic.",Negative,Safety,2023-11-10T08:30:55Z
+719,"Project Alpha is ahead of schedule. Great coordination from the planning team.",Positive,Project Management,2023-11-10T10:15:30Z
+720,"Updated the inventory log. We are short on 1/4 inch screws.",Neutral,Supplies,2023-11-10T11:50:45Z
+721,"The parking lot lights are out again. It feels unsafe walking to the car at night.",Negative,Safety,2023-11-10T17:05:20Z
+722,"Performed the annual deep clean of the machinery. Everything looks brand new.",Positive,Maintenance,2023-11-13T08:10:15Z
+723,"My badge stopped working on the main gate reader. Had to get security to let me in.",Negative,Security,2023-11-13T09:25:40Z
+724,"Tested the emergency backup generator. It kicked in within 10 seconds as expected.",Neutral,Maintenance,2023-11-13T11:00:00Z
+725,"The cafeteria food quality has really gone down lately.",Negative,Facility,2023-11-13T12:40:22Z
+726,"Huge shoutout to Sarah for helping me debug that circuit board. Couldn't have done it without her.",Positive,Team,2023-11-13T14:15:55Z
+727,"The lift button to the 3rd floor is broken.",Negative,Facility,2023-11-13T15:50:30Z
+728,"Software license for the CAD tool expires in 3 days. Need renewal ASAP.",Neutral,Software,2023-11-14T08:20:10Z
+729,"I'm frustrated with the lack of communication regarding the schedule changes. I found out last minute.",Negative,Management,2023-11-14T09:45:35Z
+730,"Fixed the leak in the breakroom sink. No more dripping.",Neutral,Maintenance,2023-11-14T11:30:15Z
+731,"The new collaborative tools are making it much easier to share updates with the remote team.",Positive,Software,2023-11-14T13:10:50Z
+732,"We need a better system for tracking borrowed tools. Things go missing too often.",Negative,Workflow,2023-11-14T14:55:25Z
+733,"Replaced the filter on the main intake. Air flow has improved by 20%.",Neutral,Maintenance,2023-11-15T08:40:12Z
+734,"The internet speed is painfully slow today. Downloads are timing out.",Negative,IT Infrastructure,2023-11-15T10:05:40Z
+735,"Client was very impressed with the detailed report we provided.",Positive,Customer Service,2023-11-15T11:45:00Z
+736,"Recycling bins are overflowing. They haven't been emptied in a week.",Negative,Facility,2023-11-15T13:30:22Z
+737,"Calibrated the temperature sensors in the cold storage. Readings are accurate now.",Neutral,Maintenance,2023-11-15T15:10:55Z
+738,"The mandatory overtime is getting exhausting. We need more staff.",Negative,HR Policy,2023-11-16T08:15:30Z
+739,"New tool kits arrived. Everything looks high quality and durable.",Positive,Equipment,2023-11-16T09:50:15Z
+740,"Completed the wiring for the new extension. Pending inspection.",Neutral,Project Update,2023-11-16T11:20:40Z
+741,"The layout of the new dashboard is confusing. I can't find the 'submit' button easily.",Negative,Software,2023-11-16T13:05:10Z
+742,"Patched the hole in the drywall in the hallway.",Neutral,Maintenance,2023-11-16T14:40:35Z
+743,"Thanks for the birthday donuts in the breakroom!",Positive,Culture,2023-11-17T08:30:20Z
+744,"The company van pulls to the left when braking. Needs mechanic attention.",Negative,Maintenance,2023-11-17T10:15:50Z
+745,"Inventory check complete for Zone B. All accounted for.",Neutral,Workflow,2023-11-17T11:55:15Z
+746,"It's too dark in the parking garage. Several lights are out.",Negative,Safety,2023-11-17T16:30:00Z
+747,"Upgraded the RAM on the design workstations. Rendering times are much faster now.",Positive,IT Support,2023-11-20T08:10:45Z
+748,"The soap dispenser in the men's room is broken again.",Negative,Facility,2023-11-20T09:40:12Z
+749,"Routine diagnostic on the chiller unit. Operating within spec.",Neutral,Maintenance,2023-11-20T11:15:30Z
+750,"The new project management software is too complex for what we need. It slows us down.",Negative,Software,2023-11-20T13:20:55Z
+751,"Great teamwork on the emergency shutdown procedure drill. Everyone knew their role.",Positive,Training,2023-11-20T15:00:22Z
+752,"Need new batteries for the multimeters. We are completely out.",Neutral,Supplies,2023-11-21T08:25:10Z
+753,"The noise from the ventilation system is giving me a headache.",Negative,Environment,2023-11-21T10:00:35Z
+754,"Successfully deployed the patch to the production server.",Positive,IT Support,2023-11-21T11:40:50Z
+755,"The chairs in the meeting room are falling apart. The fabric is torn on most of them.",Negative,Facility,2023-11-21T13:15:15Z
+756,"Performed oil change on the backup generator.",Neutral,Maintenance,2023-11-21T14:55:40Z
+757,"The new soldering irons heat up much faster. Saves a lot of time in the morning.",Positive,Equipment,2023-11-22T08:10:15Z
+758,"We are consistently running out of heavy-duty zip ties by Wednesday. Can we increase the order volume?",Negative,Supplies,2023-11-22T09:45:30Z
+759,"Checked the alignment on the conveyor belt system. Adjustments made, tracking straight now.",Neutral,Maintenance,2023-11-22T11:20:00Z
+760,"The glare on my monitor from the window is terrible in the afternoon. We need blinds.",Negative,Environment,2023-11-22T13:55:45Z
+761,"Really enjoyed the town hall meeting today. Good to hear about the company's future plans.",Positive,Culture,2023-11-22T15:30:10Z
+762,"The label printer is printing faint text again. I tried cleaning the head but it didn't help.",Negative,Equipment,2023-11-23T08:25:22Z
+763,"Completed the firmware upgrade on all field units in Sector 7.",Neutral,Maintenance,2023-11-23T10:10:50Z
+764,"Why do we have to fill out the same form on paper and digital? It's redundant.",Negative,Workflow,2023-11-23T11:45:15Z
+765,"The new safety boots are surprisingly comfortable. No blisters after the first week!",Positive,Supplies,2023-11-23T14:05:30Z
+766,"Verified the backup power supply for the server room. Batteries are holding charge.",Neutral,Maintenance,2023-11-23T15:50:55Z
+767,"The coffee in the breakroom tastes burnt every single day.",Negative,Facility,2023-11-24T08:15:10Z
+768,"Fixed the broken latch on the tool cabinet. It locks properly now.",Neutral,Maintenance,2023-11-24T09:35:25Z
+769,"I'm having trouble accessing the shared drive from the VPN. Connection keeps dropping.",Negative,IT Infrastructure,2023-11-24T11:00:40Z
+770,"Great support from the IT team on setting up my new workstation. Very fast response.",Positive,IT Support,2023-11-24T13:20:15Z
+771,"The air compressor is making a loud rattling noise. Tagging it out for inspection.",Negative,Equipment,2023-11-24T14:55:30Z
+772,"Replaced the worn-out gaskets on pump #3. No leaks observed during test run.",Neutral,Maintenance,2023-11-27T08:30:45Z
+773,"The new time clock system is confusing. I'm not sure if my punch-in was recorded.",Negative,Software,2023-11-27T09:50:10Z
+774,"Customer feedback for the installation was glowing. They specifically mentioned the clean cabling.",Positive,Customer Service,2023-11-27T11:15:25Z
+775,"We need more detailed maps for the remote sites. The current ones are outdated.",Negative,Documentation,2023-11-27T13:40:50Z
+776,"Restocked the chemical storage cabinet. Inventory levels are good.",Neutral,Supplies,2023-11-27T15:05:15Z
+777,"The heating in the office is stuck on high. It's like a sauna in here.",Negative,Facility,2023-11-28T08:20:30Z
+778,"Successfully troubleshot the intermittent signal loss on the main antenna.",Positive,Problem Solving,2023-11-28T10:00:55Z
+779,"The user manual for the new analyzer is in German only. Can we get an English version?",Negative,Documentation,2023-11-28T11:35:10Z
+780,"Monthly safety inspection of the warehouse complete. No violations found.",Neutral,Safety,2023-11-28T13:10:25Z
+781,"Love the new standing desks! My posture feels much better.",Positive,Facility,2023-11-28T14:45:40Z
+782,"The door to the server room doesn't close automatically like it should. Security risk.",Negative,Security,2023-11-29T08:10:15Z
+783,"Replaced the toner in the main hallway printer.",Neutral,Maintenance,2023-11-29T09:25:30Z
+784,"The inventory software is incredibly slow today. Each scan takes 10 seconds to register.",Negative,Software,2023-11-29T11:00:45Z
+785,"Big thanks to the logistics team for getting those parts here overnight. Saved the project.",Positive,Team,2023-11-29T12:50:10Z
+786,"The vending machine ate my money again. This is the third time this month.",Negative,Facility,2023-11-29T14:30:25Z
+787,"Calibrated the flow meters on the dispensing unit. Accuracy is within 0.5%.",Neutral,Maintenance,2023-11-30T08:40:50Z
+788,"We are out of medium-sized gloves. I can't work with the large ones, they fall off.",Negative,Supplies,2023-11-30T10:15:15Z
+789,"The new project tracking dashboard is very clean and easy to read.",Positive,Software,2023-11-30T11:45:30Z
+790,"The noise from the street is really loud in the conference room. Hard to hear clients on calls.",Negative,Environment,2023-11-30T13:20:45Z
+791,"Updated the OS on all lab computers. Security patches applied.",Neutral,IT Support,2023-11-30T15:00:10Z
+792,"The water pressure in the wash bay is too low to clean the trucks effectively.",Negative,Facility,2023-12-01T08:15:25Z
+793,"Finished the preventative maintenance on the HVAC units on the roof.",Neutral,Maintenance,2023-12-01T09:50:40Z
+794,"I feel like my concerns about the project timeline are being ignored.",Negative,Management,2023-12-01T11:30:55Z
+795,"The holiday party was great! Thanks for organizing it.",Positive,Culture,2023-12-01T13:05:10Z
+796,"One of the legs on my workbench is bent. It wobbles when I'm working.",Negative,Equipment,2023-12-01T14:40:25Z
+797,"Lubricated the chain drive on the packaging machine.",Neutral,Maintenance,2023-12-04T08:10:50Z
+798,"The new expense reporting tool is a nightmare. It rejects valid receipts constantly.",Negative,Software,2023-12-04T09:35:15Z
+799,"Great job on the new signage in the warehouse. Much easier to navigate now.",Positive,Organization,2023-12-04T11:00:30Z
+800,"The flickering light in the hallway is going to give someone a seizure. Please fix.",Negative,Facility,2023-12-04T12:45:45Z
+801,"Inventory count for the copper tubing matches the system records.",Neutral,Workflow,2023-12-04T14:20:10Z
+802,"The company phone I was issued has a cracked screen. I need a replacement.",Negative,Equipment,2023-12-05T08:30:25Z
+803,"Fixed the connectivity issue on the IoT sensors in the greenhouse.",Neutral,IT Support,2023-12-05T10:05:40Z
+804,"The mandatory training modules are too long and repetitive.",Negative,Training,2023-12-05T11:50:55Z
+805,"Really appreciate the flexibility to work from home when I'm just doing documentation.",Positive,HR Policy,2023-12-05T13:30:10Z
+806,"The lock on the hazardous waste bin is broken. It's currently secured with a zip tie.",Negative,Safety,2023-12-05T15:10:25Z
+807,"Replaced the hydraulic fluid in the press. Levels are optimal.",Neutral,Maintenance,2023-12-06T08:45:50Z
+808,"The internet is down again. This is killing our productivity.",Negative,IT Infrastructure,2023-12-06T10:20:15Z
+809,"The new apprentice is doing a great job. Very eager to learn.",Positive,Team,2023-12-06T11:55:30Z
+810,"We need a better way to organize the scrap metal. It's piling up everywhere.",Negative,Organization,2023-12-06T13:40:45Z
+811,"Tested the fire alarm system. All zones responded correctly.",Neutral,Safety,2023-12-06T15:25:10Z
+812,"The chairs in the breakroom are really uncomfortable. Hard plastic is not great for relaxing.",Negative,Facility,2023-12-07T08:10:25Z
+813,"Successfully recovered the corrupted data from the old hard drive.",Positive,IT Support,2023-12-07T09:45:40Z
+814,"There's a draft coming from the window near my desk. It's freezing.",Negative,Facility,2023-12-07T11:20:55Z
+815,"Restocked the paper towels and soap in all restrooms.",Neutral,Supplies,2023-12-07T13:05:10Z
+816,"The new barcode scanners read codes much faster than the old ones. Huge improvement.",Positive,Equipment,2023-12-07T14:50:25Z
+817,"The software update broke the export feature. I can't generate the reports I need.",Negative,Software,2023-12-08T08:30:50Z
+818,"Cleaned and calibrated the optical sensors on the sorting line.",Neutral,Maintenance,2023-12-08T10:15:15Z
+819,"Why are we still using Windows 7 on the shop floor computers? It's a security risk.",Negative,IT Infrastructure,2023-12-08T11:50:30Z
+820,"The team lunch was a nice gesture. Thanks!",Positive,Culture,2023-12-08T13:35:45Z
+821,"The path to the emergency exit is blocked by boxes. This needs to be cleared immediately.",Negative,Safety,2023-12-08T15:20:10Z
+822,"Replaced the worn belts on the air handling unit.",Neutral,Maintenance,2023-12-11T08:15:25Z
+823,"I'm still waiting on approval for the purchase order I submitted last week.",Negative,Workflow,2023-12-11T09:50:40Z
+824,"The new noise-canceling headphones are a game changer in the server room.",Positive,Equipment,2023-12-11T11:35:55Z
+825,"The water cooler is empty and there are no replacement bottles.",Negative,Supplies,2023-12-11T13:20:10Z
+826,"Configured the new network switch. Traffic is flowing smoothly.",Neutral,IT Support,2023-12-11T15:05:25Z
+827,"The parking lot needs to be salted. It's a sheet of ice out there.",Negative,Safety,2023-12-12T08:10:50Z
+828,"Finished the installation of the new robotic arm. Calibration pending.",Neutral,Project Update,2023-12-12T09:45:15Z
+829,"The software interface is too cluttered. It's hard to find the important metrics.",Negative,Software,2023-12-12T11:30:30Z
+830,"Kudos to the maintenance team for fixing the heating so quickly.",Positive,Team,2023-12-12T13:15:45Z
+831,"The drill press is vibrating excessively. Bearing might be shot.",Negative,Equipment,2023-12-12T15:00:10Z
+832,"Updated the safety data sheets (SDS) binder with the latest chemicals.",Neutral,Documentation,2023-12-13T08:30:25Z
+833,"The microwave in the kitchen smells like burnt popcorn. Can we get it cleaned?",Negative,Facility,2023-12-13T10:15:40Z
+834,"The new project workflow is much more efficient. Less red tape.",Positive,Workflow,2023-12-13T11:50:55Z
+835,"We are out of black ink for the plotters. Can't print the blueprints.",Negative,Supplies,2023-12-13T13:35:10Z
+836,"Performed quarterly maintenance on the backup UPS. Battery health is 95%.",Neutral,Maintenance,2023-12-13T15:20:25Z
+837,"The touch screen on the control panel is unresponsive in the top right corner.",Negative,Equipment,2023-12-14T08:15:50Z
+838,"Great job on the safety presentation. Very engaging.",Positive,Training,2023-12-14T10:00:15Z
+839,"The lighting in the inspection area is too dim. We risk missing defects.",Negative,Quality Control,2023-12-14T11:45:30Z
+840,"Reorganized the cable rack. Much easier to find what you need now.",Neutral,Organization,2023-12-14T13:30:45Z
+841,"The company car smells like smoke. It's disgusting.",Negative,Maintenance,2023-12-14T15:15:10Z
+842,"Successfully deployed the new feature set to the staging environment.",Positive,Software,2023-12-15T08:40:25Z
+843,"The door handle to the lab is loose. It feels like it's going to come off.",Negative,Facility,2023-12-15T10:25:40Z
+844,"Inventory check for the fasteners is complete. Discrepancy of -50 units found.",Neutral,Workflow,2023-12-15T12:10:55Z
+845,"I love the new flexible spending account options. Very helpful.",Positive,HR Policy,2023-12-15T13:55:10Z
+846,"The noise from the renovation upstairs is unbearable. I can't concentrate.",Negative,Environment,2023-12-15T15:40:25Z
+847,"Replaced the burnt-out fuse in the main breaker panel.",Neutral,Maintenance,2023-12-18T08:10:50Z
+848,"The new ticketing system is confusing. I don't know which category to choose.",Negative,Software,2023-12-18T09:55:15Z
+849,"Thanks for the new ergonomic chair! My back pain is gone.",Positive,Equipment,2023-12-18T11:40:30Z
+850,"The floor is wet near the water fountain. Someone is going to slip.",Negative,Safety,2023-12-18T13:25:45Z
+851,"Completed the data migration for the finance department.",Neutral,IT Support,2023-12-18T15:10:10Z
+852,"The printer is out of paper again. Why is it never stocked?",Negative,Supplies,2023-12-19T08:30:25Z
+853,"Great support from the vendor on troubleshooting the new machine.",Positive,External Partners,2023-12-19T10:15:40Z
+854,"The AC in the server room is making a grinding noise.",Negative,Equipment,2023-12-19T12:00:55Z
+855,"Logged all the new assets into the tracking system.",Neutral,Workflow,2023-12-19T13:45:10Z
+856,"The new schedule is much better. I appreciate having consecutive days off.",Positive,HR Policy,2023-12-19T15:30:25Z
+857,"The new soldering station in Lab 2 has a faulty temperature sensor. It fluctuates wildy.",Negative,Equipment,2023-12-20T08:15:30Z
+858,"Finally, the coffee machine has been upgraded! The espresso is actually decent now.",Positive,Facility,2023-12-20T09:45:12Z
+859,"Replaced the worn brake pads on the delivery truck. Safety check passed.",Neutral,Maintenance,2023-12-20T11:20:00Z
+860,"The Wi-Fi dead zone in the south warehouse is really hindering our inventory scanning process.",Negative,IT Infrastructure,2023-12-20T13:55:45Z
+861,"Great job on the new onboarding documentation. It made training the new hire so much easier.",Positive,Training,2023-12-20T15:30:10Z
+862,"We are out of size 10 nitrile gloves again. This happens every week.",Negative,Supplies,2023-12-21T08:25:22Z
+863,"Calibrated the laser cutter. Precision is back within 0.01mm tolerance.",Neutral,Maintenance,2023-12-21T10:10:50Z
+864,"The login portal for the benefits site is down. I can't check my vacation balance.",Negative,Software,2023-12-21T11:45:15Z
+865,"I really appreciate the team's flexibility with my shift change request next week.",Positive,Culture,2023-12-21T14:05:30Z
+866,"The emergency exit sign in the main corridor is flickering.",Negative,Safety,2023-12-21T15:50:55Z
+867,"Restocked the chemical spill kits in Zone C.",Neutral,Safety,2023-12-22T08:10:15Z
+868,"The noise from the ventilation fan in the clean room is distracting. It needs a new bearing.",Negative,Environment,2023-12-22T09:45:30Z
+869,"Successfully updated the firmware on all the remote sensors. Connectivity is stable.",Positive,IT Support,2023-12-22T11:20:45Z
+870,"Why do we have three different chat apps? It's confusing to know where to message people.",Negative,Communication,2023-12-22T13:55:10Z
+871,"Completed the monthly audit of the tool crib. Only two minor items missing.",Neutral,Workflow,2023-12-22T15:30:25Z
+872,"The new rugged laptops are heavy but the battery life is amazing. Worth the trade-off.",Positive,Equipment,2023-12-26T08:20:40Z
+873,"The tap in the upstairs bathroom is leaking. It's wasting a lot of water.",Negative,Facility,2023-12-26T10:05:55Z
+874,"Refilled the coolant on CNC machine #4. Levels are good.",Neutral,Maintenance,2023-12-26T11:40:10Z
+875,"The procurement process is too slow. I've been waiting for a replacement part for 2 weeks.",Negative,Workflow,2023-12-26T13:15:25Z
+876,"Thanks for the winter jackets! They are very warm for the outdoor inspections.",Positive,Supplies,2023-12-26T14:50:40Z
+877,"The printer driver on the network is corrupted. Nobody can print to the main copier.",Negative,IT Support,2023-12-27T08:30:55Z
+878,"Inspected the fire extinguishers in the East Wing. All pressure gauges are in the green.",Neutral,Safety,2023-12-27T10:15:10Z
+879,"The smell from the dumpster near the loading dock is awful today.",Negative,Environment,2023-12-27T11:50:25Z
+880,"The new project management tool helps me prioritize tasks much better.",Positive,Software,2023-12-27T13:25:40Z
+881,"I bumped my head on the low pipe in the utility room. We need to mark that with high-vis tape.",Negative,Safety,2023-12-27T15:00:55Z
+882,"Replaced the battery in the UPS for the main server rack.",Neutral,Maintenance,2023-12-28T08:15:10Z
+883,"The vending machine stole my money again. Can we get a refund process?",Negative,Facility,2023-12-28T09:50:25Z
+884,"The new apprentice, Sarah, is learning very quickly. She's a great addition.",Positive,Team,2023-12-28T11:25:40Z
+885,"The software for the spectrum analyzer keeps crashing on startup.",Negative,Software,2023-12-28T13:00:55Z
+886,"Organized the spare parts inventory. It's much easier to find fuses now.",Neutral,Organization,2023-12-28T14:35:10Z
+887,"The heating system in the office is making a banging noise.",Negative,Facility,2023-12-29T08:10:25Z
+888,"Successfully deployed the security patch to all workstations.",Positive,IT Support,2023-12-29T09:45:40Z
+889,"We are low on isopropyl alcohol wipes. Need to order more ASAP.",Neutral,Supplies,2023-12-29T11:20:55Z
+890,"The lighting in the parking lot is still not fixed. It's dangerous at night.",Negative,Safety,2023-12-29T12:55:10Z
+891,"Finished the annual review of the safety protocols. No major updates needed.",Neutral,Documentation,2023-12-29T14:30:25Z
+892,"The new ergonomic mouse pads are great. My wrist pain has decreased.",Positive,Equipment,2024-01-02T08:25:40Z
+893,"The door to the chemical storage room doesn't latch properly.",Negative,Safety,2024-01-02T10:00:55Z
+894,"Performed a deep clean on the 3D printer nozzles. Print quality is restored.",Neutral,Maintenance,2024-01-02T11:35:10Z
+895,"The VPN connection is incredibly slow today. I can barely access the file server.",Negative,IT Infrastructure,2024-01-02T13:10:25Z
+896,"Kudos to the team for hitting the deadline on the Alpha project.",Positive,Team,2024-01-02T14:45:40Z
+897,"The water cooler is leaking onto the carpet.",Negative,Facility,2024-01-03T08:20:55Z
+898,"Updated the inventory count for the copper wire spools.",Neutral,Workflow,2024-01-03T09:55:10Z
+899,"The new time tracking app is very intuitive. Much better than the old spreadsheets.",Positive,Software,2024-01-03T11:30:25Z
+900,"There is a tripping hazard near the entrance. The rug is curled up.",Negative,Safety,2024-01-03T13:05:40Z
+901,"Replaced the hydraulic hose on the forklift. No leaks found.",Neutral,Maintenance,2024-01-03T14:40:55Z
+902,"The brightness on the projector in the conference room is too low.",Negative,Equipment,2024-01-04T08:15:10Z
+903,"Received positive feedback from the client on the recent installation.",Positive,Customer Service,2024-01-04T09:50:25Z
+904,"We need to update the contact list for emergency vendors. Some numbers are disconnected.",Negative,Documentation,2024-01-04T11:25:40Z
+905,"Sorted the recycling bins. They were contaminated with trash.",Neutral,Facility,2024-01-04T13:00:55Z
+906,"The new safety glasses fog up instantly. I can't see anything.",Negative,Supplies,2024-01-04T14:35:10Z
+907,"Completed the preventative maintenance on the air compressor.",Neutral,Maintenance,2024-01-05T08:10:25Z
+908,"The noise from the construction next door is giving me a headache.",Negative,Environment,2024-01-05T09:45:40Z
+909,"The new collaborative whiteboard tool is fantastic for brainstorming.",Positive,Software,2024-01-05T11:20:55Z
+910,"I'm still waiting for my expense reimbursement from last month.",Negative,Workflow,2024-01-05T12:55:10Z
+911,"Restocked the first aid kit in the breakroom.",Neutral,Safety,2024-01-05T14:30:25Z
+912,"The chairs in the waiting area are stained and look unprofessional.",Negative,Facility,2024-01-08T08:25:40Z
+913,"Successfully migrated the database to the cloud server. Performance is good.",Positive,IT Support,2024-01-08T10:00:55Z
+914,"The label maker is out of tape again. Can we buy in bulk?",Negative,Supplies,2024-01-08T11:35:10Z
+915,"Checked the alignment of the robotic arm. It's within spec.",Neutral,Maintenance,2024-01-08T13:10:25Z
+916,"The new uniform shirts are too tight in the shoulders.",Negative,Supplies,2024-01-08T14:45:40Z
+917,"Great presentation on the new safety standards. Very clear.",Positive,Training,2024-01-09T08:20:55Z
+918,"The key card reader on the back door is intermittent.",Negative,Security,2024-01-09T09:55:10Z
+919,"Updated the software on the diagnostic tablets.",Neutral,IT Support,2024-01-09T11:30:25Z
+920,"The cafeteria ran out of food by 12:30. Not cool for the late shift.",Negative,Facility,2024-01-09T13:05:40Z
+921,"Fixed the wobbly leg on the workbench in Bay 1.",Neutral,Maintenance,2024-01-09T14:40:55Z
+922,"The new project dashboard is confusing. Too many colors and charts.",Negative,Software,2024-01-10T08:15:10Z
+923,"Really enjoying the flexible hours. Helps with avoiding traffic.",Positive,HR Policy,2024-01-10T09:50:25Z
+924,"The exhaust fan in the restroom is broken. It smells bad.",Negative,Facility,2024-01-10T11:25:40Z
+925,"Calibrated the pressure gauges on the main boiler.",Neutral,Maintenance,2024-01-10T13:00:55Z
+926,"We need more storage space for the incoming parts. The shelves are full.",Negative,Organization,2024-01-10T14:35:10Z
+927,"The new high-speed internet connection is amazing. Downloads are instant.",Positive,IT Infrastructure,2024-01-11T08:10:25Z
+928,"The floor in the warehouse is slippery near the loading dock.",Negative,Safety,2024-01-11T09:45:40Z
+929,"Replaced the toner cartridge in the engineering plotter.",Neutral,Maintenance,2024-01-11T11:20:55Z
+930,"The documentation for the legacy system is incomplete. Missing schematic diagrams.",Negative,Documentation,2024-01-11T12:55:10Z
+931,"Great support from the HR team regarding my benefits question.",Positive,HR Support,2024-01-11T14:30:25Z
+932,"The company van has a flat tire. Needs to be fixed before the morning run.",Negative,Maintenance,2024-01-12T08:25:40Z
+933,"Inventory check complete for the electrical components. All accounted for.",Neutral,Workflow,2024-01-12T10:00:55Z
+934,"The noise from the server fans is getting louder. Bearing failure imminent?",Negative,Equipment,2024-01-12T11:35:10Z
+935,"The new standing desks are a game changer for my back pain.",Positive,Facility,2024-01-12T13:10:25Z
+936,"The sink in the kitchenette is clogged again.",Negative,Facility,2024-01-12T14:45:40Z
+937,"Lubricated the gears on the conveyor belt. Running smoothly now.",Neutral,Maintenance,2024-01-15T08:20:55Z
+938,"The software license for the CAD tool expired today. Can't work.",Negative,Software,2024-01-15T09:55:10Z
+939,"Team lunch was great! Good way to bond with the new hires.",Positive,Culture,2024-01-15T11:30:25Z
+940,"The lighting in the inspection room is flickering. It's annoying.",Negative,Facility,2024-01-15T13:05:40Z
+941,"Updated the safety log for the week. No incidents reported.",Neutral,Safety,2024-01-15T14:40:55Z
+942,"The new hand tools are of poor quality. The screwdriver tip stripped on first use.",Negative,Equipment,2024-01-16T08:15:10Z
+943,"Successfully troubleshot the network issue in the west wing.",Positive,IT Support,2024-01-16T09:50:25Z
+944,"We are out of AA batteries. Need them for the remotes.",Neutral,Supplies,2024-01-16T11:25:40Z
+945,"The temperature in the lab is too high. It's affecting the samples.",Negative,Environment,2024-01-16T13:00:55Z
+946,"The new onboarding process is very streamlined and efficient.",Positive,Training,2024-01-16T14:35:10Z
+947,"The door handle on the main entrance is loose.",Negative,Facility,2024-01-17T08:10:25Z
+948,"Refilled the oil in the compressor. Levels are normal.",Neutral,Maintenance,2024-01-17T09:45:40Z
+949,"The mandatory password change every 30 days is excessive and annoying.",Negative,IT Policy,2024-01-17T11:20:55Z
+950,"Great job on the quarterly report. Very detailed and accurate.",Positive,Management,2024-01-17T12:55:10Z
+951,"The carpet in the hallway is frayed. Someone could trip.",Negative,Safety,2024-01-17T14:30:25Z
+952,"Replaced the burnt out light bulb in the supply closet.",Neutral,Maintenance,2024-01-18T08:25:40Z
+953,"The new CRM software is buggy. It freezes when I try to save a contact.",Negative,Software,2024-01-18T10:00:55Z
+954,"The coffee machine is actually working today! Miracle.",Positive,Facility,2024-01-18T11:35:10Z
+955,"We need more whiteboard markers. Most of them are dried out.",Negative,Supplies,2024-01-18T13:10:25Z
+956,"Checked the fire alarm panel. System is normal.",Neutral,Safety,2024-01-18T14:45:40Z
+957,"The parking lot is full of potholes. Needs repaving.",Negative,Facility,2024-01-19T08:20:55Z
+958,"The new noise-canceling headphones are fantastic. I can focus much better.",Positive,Equipment,2024-01-19T09:55:10Z
+959,"Cleaned the filters on the HVAC unit. Airflow improved.",Neutral,Maintenance,2024-01-19T11:30:25Z
+960,"The process for requesting time off is too complicated.",Negative,HR Policy,2024-01-19T13:05:40Z
+961,"Kudos to the IT team for the quick turnaround on my laptop repair.",Positive,IT Support,2024-01-19T14:40:55Z
+962,"The water pressure in the restroom is too high. It splashes everywhere.",Negative,Facility,2024-01-22T08:15:10Z
+963,"Inventory count for the steel bolts is correct.",Neutral,Workflow,2024-01-22T09:50:25Z
+964,"The noise from the street construction is distracting.",Negative,Environment,2024-01-22T11:25:40Z
+965,"The new training videos are very high quality and informative.",Positive,Training,2024-01-22T13:00:55Z
+966,"The lock on my locker is jammed. I can't get my stuff out.",Negative,Facility,2024-01-22T14:35:10Z
+967,"Replaced the battery in the emergency light.",Neutral,Maintenance,2024-01-23T08:10:25Z
+968,"The software update deleted my custom settings. Very frustrating.",Negative,Software,2024-01-23T09:45:40Z
+969,"The new breakroom furniture is very comfortable and looks great.",Positive,Facility,2024-01-23T11:20:55Z
+970,"We are out of printer paper in the main office.",Negative,Supplies,2024-01-23T12:55:10Z
+971,"Tested the backup generator. Started up immediately.",Neutral,Maintenance,2024-01-23T14:30:25Z
+972,"The air conditioning is blowing hot air. It's uncomfortable.",Negative,Facility,2024-01-24T08:25:40Z
+973,"Successfully resolved the conflict in the project schedule.",Positive,Project Management,2024-01-24T10:00:55Z
+974,"The new safety boots are too heavy. My feet hurt by the end of the day.",Negative,Supplies,2024-01-24T11:35:10Z
+975,"Organized the file cabinet. Documents are now easy to find.",Neutral,Organization,2024-01-24T13:10:25Z
+976,"The glare from the window makes it hard to see my screen.",Negative,Environment,2024-01-24T14:45:40Z
+977,"The new collaboration tool is great for keeping everyone in the loop.",Positive,Software,2024-01-25T08:20:55Z
+978,"The elevator is making a weird screeching noise.",Negative,Facility,2024-01-25T09:55:10Z
+979,"Calibrated the torque wrench. It's accurate now.",Neutral,Maintenance,2024-01-25T11:30:25Z
+980,"The approval process for new tools takes too long.",Negative,Workflow,2024-01-25T13:05:40Z
+981,"Thanks for the new monitors! The extra screen space is very helpful.",Positive,Equipment,2024-01-25T14:40:55Z
+982,"The bathroom door doesn't lock properly. Privacy issue.",Negative,Facility,2024-01-26T08:15:10Z
+983,"Updated the firmware on the network switch.",Neutral,IT Support,2024-01-26T09:50:25Z
+984,"The mandatory training session was boring and irrelevant.",Negative,Training,2024-01-26T11:25:40Z
+985,"Great job on organizing the team building event. It was fun.",Positive,Culture,2024-01-26T13:00:55Z
+986,"The walkway to the parking lot is icy. Needs salt.",Negative,Safety,2024-01-26T14:35:10Z
+987,"Replaced the worn out casters on the tool cart.",Neutral,Maintenance,2024-01-29T08:10:25Z
+988,"The internet speed is crawling today. Can't get any work done.",Negative,IT Infrastructure,2024-01-29T09:45:40Z
+989,"The new project lead is very supportive and knowledgeable.",Positive,Management,2024-01-29T11:20:55Z
+990,"We are out of coffee filters. Crisis!",Negative,Supplies,2024-01-29T12:55:10Z
+991,"Checked the emergency stop buttons on all machines. All functional.",Neutral,Safety,2024-01-29T14:30:25Z
+992,"The printer is jamming constantly. Needs service.",Negative,Equipment,2024-01-30T08:25:40Z
+993,"Successfully recovered the deleted files for the marketing team.",Positive,IT Support,2024-01-30T10:00:55Z
+994,"The temperature in the server room is rising. AC might be failing.",Negative,Environment,2024-01-30T11:35:10Z
+995,"New safety gloves are much better fitting and durable.",Positive,Supplies,2024-01-30T13:10:25Z
+996,"The handle on the microwave is broken.",Negative,Facility,2024-01-30T14:45:40Z
+997,"Lubricated the door hinges throughout the building.",Neutral,Maintenance,2024-01-31T08:20:55Z
+998,"The new expense system is too complicated. I gave up.",Negative,Software,2024-01-31T09:55:10Z
+999,"Great feedback from the client on the quick repair.",Positive,Customer Service,2024-01-31T11:30:25Z
+1000,"The lighting in the stairwell is out. It's pitch black.",Negative,Safety,2024-01-31T13:05:40Z
+1001,"Inventory check complete for the plastic components.",Neutral,Workflow,2024-01-31T14:40:55Z
+1002,"The new drill bits break too easily. Cheap quality.",Negative,Equipment,2024-02-01T08:15:10Z
+1003,"Appreciate the shoutout in the company meeting. Feels good to be recognized.",Positive,Culture,2024-02-01T09:50:25Z
+1004,"The water fountain filter needs changing. The red light is on.",Negative,Facility,2024-02-01T11:25:40Z
+1005,"Updated the antivirus definitions on all servers.",Neutral,IT Support,2024-02-01T13:00:55Z
+1006,"The noise from the printer is distracting. Can we move it?",Negative,Environment,2024-02-01T14:35:10Z
+1007,"The new standing desk mat is very comfortable.",Positive,Equipment,2024-02-02T08:10:25Z
+1008,"The software keeps logging me out. Session timeout is too short.",Negative,Software,2024-02-02T09:45:40Z
+1009,"Refilled the soap dispensers in the restrooms.",Neutral,Supplies,2024-02-02T11:20:55Z
+1010,"The heating is not working in the conference room. It's freezing.",Negative,Facility,2024-02-02T12:55:10Z
+1011,"Successfully installed the new graphics card in the design PC.",Positive,IT Support,2024-02-02T14:30:25Z
+1012,"The company car is low on windshield washer fluid.",Negative,Maintenance,2024-02-05T08:25:40Z
+1013,"Reorganized the server rack cables. Looks much neater.",Neutral,Organization,2024-02-05T10:00:55Z
+1014,"The new safety video is cheesy but gets the point across.",Neutral,Training,2024-02-05T11:35:10Z
+1015,"The vending machine is out of snacks again.",Negative,Facility,2024-02-05T13:10:25Z
+1016,"Great job on the new website launch. It looks professional.",Positive,Marketing,2024-02-05T14:45:40Z
+1017,"The door closer on the front door is leaking oil.",Negative,Facility,2024-02-06T08:20:55Z
+1018,"Calibrated the multimeter. Readings are accurate.",Neutral,Maintenance,2024-02-06T09:55:10Z
+1019,"The new project management software is slow to load.",Negative,Software,2024-02-06T11:30:25Z
+1020,"I like the new casual dress code policy. Much more comfortable.",Positive,HR Policy,2024-02-06T13:05:40Z
+1021,"The floor tiles in the lobby are cracked. Tripping hazard.",Negative,Safety,2024-02-06T14:40:55Z
+1022,"Replaced the light tubes in the warehouse ceiling.",Neutral,Maintenance,2024-02-07T08:15:10Z
+1023,"The internet connection dropped during a client call. Embarrassing.",Negative,IT Infrastructure,2024-02-07T09:50:25Z
+1024,"The new coffee blend is delicious. Good choice.",Positive,Facility,2024-02-07T11:25:40Z
+1025,"We are out of staples. Can't staple the reports.",Negative,Supplies,2024-02-07T13:00:55Z
+1026,"Checked the pressure in the fire sprinkler system. Normal.",Neutral,Safety,2024-02-07T14:35:10Z
+1027,"The new office chairs are not ergonomic. My back hurts.",Negative,Equipment,2024-02-08T08:10:25Z
+1028,"Successfully configured the new firewall rules.",Positive,IT Support,2024-02-08T09:45:40Z
+1029,"The temperature in the office varies too much. Hot then cold.",Negative,Environment,2024-02-08T11:20:55Z
+1030,"The training on the new equipment was very helpful.",Positive,Training,2024-02-08T12:55:10Z
+1031,"The sink in the men's room is draining slowly.",Negative,Facility,2024-02-08T14:30:25Z
+1032,"Inventory check complete for the aluminum sheets.",Neutral,Workflow,2024-02-09T08:25:40Z
+1033,"The new scanner is difficult to use. Buttons are small.",Negative,Equipment,2024-02-09T10:00:55Z
+1034,"Great teamwork on the urgent repair job yesterday.",Positive,Team,2024-02-09T11:35:10Z
+1035,"The water cooler is making a humming noise.",Negative,Facility,2024-02-09T13:10:25Z
+1036,"Updated the OS on the receptionist's computer.",Neutral,IT Support,2024-02-09T14:45:40Z
+1037,"The parking lot gate is stuck open. Security risk.",Negative,Security,2024-02-12T08:20:55Z
+1038,"The new project timeline is unrealistic. We need more time.",Negative,Management,2024-02-12T09:55:10Z
+1039,"I appreciate the transparency from leadership regarding the changes.",Positive,Culture,2024-02-12T11:30:25Z
+1040,"We are out of Post-it notes. Need to restock.",Negative,Supplies,2024-02-12T13:05:40Z
+1041,"Lubricated the fan bearings in the HVAC unit.",Neutral,Maintenance,2024-02-12T14:40:55Z
+1042,"The new software update is causing system crashes.",Negative,Software,2024-02-13T08:15:10Z
+1043,"Successfully restored the backup after the server failure.",Positive,IT Support,2024-02-13T09:50:25Z
+1044,"The lighting in the conference room is too bright. Causes glare.",Negative,Facility,2024-02-13T11:25:40Z
+1045,"Organized the tool shed. Everything is in its place.",Neutral,Organization,2024-02-13T13:00:55Z
+1046,"The new safety shoes are very comfortable.",Positive,Supplies,2024-02-13T14:35:10Z
+1047,"The door to the breakroom squeaks loudly.",Negative,Facility,2024-02-14T08:10:25Z
+1048,"Refilled the first aid kit. Ready for emergencies.",Neutral,Safety,2024-02-14T09:45:40Z
+1049,"The internet is slow again. Productivity is suffering.",Negative,IT Infrastructure,2024-02-14T11:20:55Z
+1050,"Great job on the new product design. Customers will love it.",Positive,Product,2024-02-14T12:55:10Z
+1051,"The water pressure in the kitchen is low.",Negative,Facility,2024-02-14T14:30:25Z
+1052,"Replaced the battery in the smoke detector.",Neutral,Maintenance,2024-02-15T08:25:40Z
+1053,"The new ticketing system is easy to use. Good upgrade.",Positive,Software,2024-02-15T10:00:55Z
+1054,"We are out of trash bags. Bins are overflowing.",Negative,Supplies,2024-02-15T11:35:10Z
+1055,"Checked the calibration on the oscilloscope. It's fine.",Neutral,Maintenance,2024-02-15T13:10:25Z
+1056,"The noise from the road work is very loud.",Negative,Environment,2024-02-15T14:45:40Z
+1057,"The new laptop is very fast. Compiling code takes half the time.",Positive,Equipment,2024-02-16T08:20:55Z
+1058,"The elevator buttons are sticky. Someone spilled coffee.",Negative,Facility,2024-02-16T09:55:10Z
+1059,"Updated the virus definitions on the server.",Neutral,IT Support,2024-02-16T11:30:25Z
+1060,"The mandatory meeting could have been an email.",Negative,Management,2024-02-16T13:05:40Z
+1061,"Thanks for the free lunch! Pizza was good.",Positive,Culture,2024-02-16T14:40:55Z
+1062,"The carpet in the office is stained. Needs cleaning.",Negative,Facility,2024-02-19T08:15:10Z
+1063,"Inventory check complete for the brass fittings.",Neutral,Workflow,2024-02-19T09:50:25Z
+1064,"The new software features are confusing. Need training.",Negative,Software,2024-02-19T11:25:40Z
+1065,"The new ergonomic keyboard is great. Wrist pain is gone.",Positive,Equipment,2024-02-19T13:00:55Z
+1066,"The handle on the fridge is broken.",Negative,Facility,2024-02-19T14:35:10Z
+1067,"Replaced the filter in the water fountain.",Neutral,Maintenance,2024-02-20T08:10:25Z
+1068,"The internet connection is stable today. Finally.",Positive,IT Infrastructure,2024-02-20T09:45:40Z
+1069,"The new project manager is very organized.",Positive,Management,2024-02-20T11:20:55Z
+1070,"We are out of paper clips. Simple things matter.",Negative,Supplies,2024-02-20T12:55:10Z
+1071,"Checked the fire extinguishers. All good.",Neutral,Safety,2024-02-20T14:30:25Z
+1072,"The printer is printing streaks. Toner might be low.",Negative,Equipment,2024-02-21T08:25:40Z
+1073,"Successfully deployed the new application version.",Positive,IT Support,2024-02-21T10:00:55Z
+1074,"The temperature in the meeting room is too cold.",Negative,Facility,2024-02-21T11:35:10Z
+1075,"The new safety goggles are comfortable.",Positive,Supplies,2024-02-21T13:10:25Z
+1076,"The door to the server room is hard to open.",Negative,Facility,2024-02-21T14:45:40Z
+1077,"Lubricated the hinges on the front gate.",Neutral,Maintenance,2024-02-22T08:20:55Z
+1078,"The software is crashing when I try to export data.",Negative,Software,2024-02-22T09:55:10Z
+1079,"Great job on the client presentation.",Positive,Team,2024-02-22T11:30:25Z
+1080,"The water cooler is empty again.",Negative,Supplies,2024-02-22T13:05:40Z
+1081,"Updated the inventory list for the spare parts.",Neutral,Workflow,2024-02-22T14:40:55Z
+1082,"The new monitor stand is wobbly.",Negative,Equipment,2024-02-23T08:15:10Z
+1083,"Successfully fixed the bug in the reporting module.",Positive,IT Support,2024-02-23T09:50:25Z
+1084,"The lighting in the hallway is too dim.",Negative,Facility,2024-02-23T11:25:40Z
+1085,"The new training materials are very clear.",Positive,Training,2024-02-23T13:00:55Z
+1086,"The sink in the bathroom is leaking.",Negative,Facility,2024-02-23T14:35:10Z
+1087,"Replaced the battery in the wireless mouse.",Neutral,Maintenance,2024-02-26T08:10:25Z
+1088,"The internet is down. Can't work.",Negative,IT Infrastructure,2024-02-26T09:45:40Z
+1089,"The new team lead is very helpful.",Positive,Management,2024-02-26T11:20:55Z
+1090,"We are out of pens. Everyone is stealing them.",Negative,Supplies,2024-02-26T12:55:10Z
+1091,"Checked the emergency lights. Functional.",Neutral,Safety,2024-02-26T14:30:25Z
+1092,"The printer is out of paper. Again.",Negative,Equipment,2024-02-27T08:25:40Z
+1093,"Successfully migrated the email server.",Positive,IT Support,2024-02-27T10:00:55Z
+1094,"The temperature in the office is perfect today.",Positive,Environment,2024-02-27T11:35:10Z
+1095,"The new safety vest is too big.",Negative,Supplies,2024-02-27T13:10:25Z
+1096,"The door to the storage room is jammed.",Negative,Facility,2024-02-27T14:45:40Z
+1097,"Lubricated the conveyor belt rollers.",Neutral,Maintenance,2024-02-28T08:20:55Z
+1098,"The software is very slow today.",Negative,Software,2024-02-28T09:55:10Z
+1099,"Great job on the quarterly review.",Positive,Management,2024-02-28T11:30:25Z
+1100,"The water fountain is not cooling the water.",Negative,Facility,2024-02-28T13:05:40Z
+1101,"Updated the asset tracking system.",Neutral,Workflow,2024-02-28T14:40:55Z
+1102,"The new headset is uncomfortable.",Negative,Equipment,2024-02-29T08:15:10Z
+1103,"Successfully recovered the lost data.",Positive,IT Support,2024-02-29T09:50:25Z
+1104,"The lighting in the parking lot is improved.",Positive,Safety,2024-02-29T11:25:40Z
+1105,"We are out of scotch tape.",Negative,Supplies,2024-02-29T13:00:55Z
+1106,"Checked the smoke detectors. All working.",Neutral,Safety,2024-02-29T14:35:10Z
+1107,"The printer is making a loud noise.",Negative,Equipment,2024-03-01T08:10:25Z
+1108,"The internet speed is fast today.",Positive,IT Infrastructure,2024-03-01T09:45:40Z
+1109,"The new coffee machine is broken.",Negative,Facility,2024-03-01T11:20:55Z
+1110,"The training session was very informative.",Positive,Training,2024-03-01T12:55:10Z
+1111,"The sink in the kitchen is overflowing.",Negative,Facility,2024-03-01T14:30:25Z
+1112,"Replaced the fuse in the power strip.",Neutral,Maintenance,2024-03-04T08:25:40Z
+1113,"The software update was successful.",Positive,IT Support,2024-03-04T10:00:55Z
+1114,"The temperature in the lab is too cold.",Negative,Environment,2024-03-04T11:35:10Z
+1115,"The new safety gloves are durable.",Positive,Supplies,2024-03-04T13:10:25Z
+1116,"The door to the office is squeaking.",Negative,Facility,2024-03-04T14:45:40Z
+1117,"Lubricated the chain on the gate.",Neutral,Maintenance,2024-03-05T08:20:55Z
+1118,"The software is freezing constantly.",Negative,Software,2024-03-05T09:55:10Z
+1119,"Great job on the new project proposal.",Positive,Management,2024-03-05T11:30:25Z
+1120,"The water cooler is leaking.",Negative,Facility,2024-03-05T13:05:40Z
+1121,"Updated the inventory records.",Neutral,Workflow,2024-03-05T14:40:55Z
+1122,"The new chair is very comfortable.",Positive,Equipment,2024-03-06T08:15:10Z
+1123,"The internet is down again.",Negative,IT Infrastructure,2024-03-06T09:50:25Z
+1124,"The lighting in the office is too dim.",Negative,Facility,2024-03-06T11:25:40Z
+1125,"The training was well organized.",Positive,Training,2024-03-06T13:00:55Z
+1126,"The sink in the restroom is clogged.",Negative,Facility,2024-03-06T14:35:10Z
+1127,"Replaced the battery in the clock.",Neutral,Maintenance,2024-03-07T08:10:25Z
+1128,"The software is working perfectly now.",Positive,IT Support,2024-03-07T09:45:40Z
+1129,"The temperature in the conference room is high.",Negative,Environment,2024-03-07T11:20:55Z
+1130,"We are out of sticky notes.",Negative,Supplies,2024-03-07T12:55:10Z
+1131,"Checked the fire alarm system.",Neutral,Safety,2024-03-07T14:30:25Z
+1132,"The printer is out of toner.",Negative,Equipment,2024-03-08T08:25:40Z
+1133,"Successfully configured the router.",Positive,IT Support,2024-03-08T10:00:55Z
+1134,"The new desk is very sturdy.",Positive,Facility,2024-03-08T11:35:10Z
+1135,"The water fountain filter needs replacing.",Negative,Facility,2024-03-08T13:10:25Z
+1136,"Updated the safety manual.",Neutral,Documentation,2024-03-08T14:45:40Z
+1137,"The door handle is broken.",Negative,Facility,2024-03-11T08:20:55Z
+1138,"The software is lagging.",Negative,Software,2024-03-11T09:55:10Z
+1139,"Great team effort on the project.",Positive,Team,2024-03-11T11:30:25Z
+1140,"The coffee machine is empty.",Negative,Facility,2024-03-11T13:05:40Z
+1141,"Lubricated the hinges.",Neutral,Maintenance,2024-03-11T14:40:55Z
+1142,"The new monitor is clear.",Positive,Equipment,2024-03-12T08:15:10Z
+1143,"The internet is slow.",Negative,IT Infrastructure,2024-03-12T09:50:25Z
+1144,"The lighting is flickering.",Negative,Facility,2024-03-12T11:25:40Z
+1145,"The training was helpful.",Positive,Training,2024-03-12T13:00:55Z
+1146,"The sink is leaking.",Negative,Facility,2024-03-12T14:35:10Z
+1147,"Replaced the light bulb.",Neutral,Maintenance,2024-03-13T08:10:25Z
+1148,"The software is great.",Positive,Software,2024-03-13T09:45:40Z
+1149,"The temperature is low.",Negative,Environment,2024-03-13T11:20:55Z
+1150,"We are out of pens.",Negative,Supplies,2024-03-13T12:55:10Z
+1151,"Checked the alarms.",Neutral,Safety,2024-03-13T14:30:25Z
+1152,"The printer is jammed.",Negative,Equipment,2024-03-14T08:25:40Z
+1153,"Fixed the network issue.",Positive,IT Support,2024-03-14T10:00:55Z
+1154,"The desk is wobbly.",Negative,Facility,2024-03-14T11:35:10Z
+1155,"The water is warm.",Negative,Facility,2024-03-14T13:10:25Z
+1156,"Updated the log.",Neutral,Workflow,2024-03-14T14:45:40Z
+1157,"Replaced the faulty PSU and rerouted the cabling; server booted normally afterward with no further power drops observed during a 2‑hour burn-in test.","positive","hardware_repair","2025-11-29T08:12:03Z"
+1158,"User reported slow logins but I couldn’t reproduce the issue. Checked AD, GPOs, and network latency; all within normal range. Might be intermittent, will need monitoring tools to confirm.","neutral","diagnostics","2025-11-29T08:25:41Z"
+1159,"Patch deployment went smoothly on all 14 machines except one laptop that kept timing out. After a manual install and reboot, the patch applied successfully.","positive","software_update","2025-11-29T08:47:19Z"
+1160,"Ticket lacked essential details (no hostname, no screenshots, no error codes). Had to call the user twice to understand the problem, which delayed the resolution.","negative","process","2025-11-29T09:02:11Z"
+1161,"Cleaned a large amount of dust from the desktop and reseated the RAM. The random restarts stopped immediately. System passed extended memory diagnostics.","positive","hardware_maintenance","2025-11-29T09:16:58Z"
+1162,"VPN client keeps disconnecting every 10–15 minutes, but only for users on the 3rd floor Wi‑Fi. Strongly suspect an access point or DHCP lease issue rather than endpoint configuration.","neutral","network","2025-11-29T09:33:30Z"
+1163,"User insisted their monitor was broken, but it was just set to HDMI2 with nothing connected. Switched it back to DisplayPort and everything worked fine.","positive","user_support","2025-11-29T09:45:22Z"
+1164,"Replaced a swollen laptop battery. Old battery was at 23% health and causing sudden shutdowns. New battery passed calibration and holds charge properly.","positive","hardware_repair","2025-11-29T10:01:44Z"
+1165,"Could not complete the OS re-image because the network boot environment was down. PXE server not responding; had to postpone and log this as a dependency.","negative","infrastructure","2025-11-29T10:17:09Z"
+1166,"Configured the new label printer with the correct driver and template. Test prints aligned perfectly and the warehouse staff confirmed it’s working as expected.","positive","peripheral_setup","2025-11-29T10:29:37Z"
+1167,"User’s profile was corrupted after a forced shutdown. Created a new profile and migrated data; login time dropped from 7 minutes to under 40 seconds.","positive","os_configuration","2025-11-29T10:42:55Z"
+1168,"The replacement SSD arrived without the mounting bracket, so I couldn’t fully install it in the rack server. Temporarily secured it but we need the proper caddy ASAP.","negative","inventory","2025-11-29T10:58:14Z"
+1169,"Network drops reported in conference room B were due to a damaged patch cable under the floor box. Replaced cable and the connection stabilized immediately.","positive","network","2025-11-29T11:13:02Z"
+1170,"Spent over an hour tracking down a license key issue that could have been avoided if procurement had updated the asset record. Documentation is still lagging behind reality.","negative","process","2025-11-29T11:26:19Z"
+1171,"Upgraded BIOS and firmware on 6 laptops without any complications. Verified BitLocker status before and after; no recovery prompts were triggered.","positive","firmware_update","2025-11-29T11:38:40Z"
+1172,"Could not replicate the reported printing issue. Printer logs show no errors, and test pages from multiple users printed fine. Asked user to reopen with a screenshot if it happens again.","neutral","peripheral_support","2025-11-29T11:52:28Z"
+1173,"User appreciated that I walked them through the new MFA app instead of just sending a link. Enrollment completed successfully on both phone and tablet.","positive","user_training","2025-11-29T12:07:51Z"
+1174,"Found that the root cause of the recurring account lockouts was a password saved on an old iPad. Removed the profile and the lockouts stopped.","positive","identity_access","2025-11-29T12:23:10Z"
+1175,"Ticket was misrouted to desktop support even though it clearly involved a database permission issue. Had to reassign it to the DB team after basic checks.","negative","routing","2025-11-29T12:39:45Z"
+1176,"Installed the requested software but the user didn’t have the necessary license tier to access the advanced features they wanted. Advised them to contact their manager for approval.","neutral","software_installation","2025-11-29T12:55:06Z"
+1177,"Replaced the broken keyboard on the warehouse PC. Several keys were physically missing. New keyboard tested OK and user signed off the job.","positive","hardware_repair","2025-11-29T13:09:32Z"
+1178,"Wi‑Fi coverage in the far corner of the office is still weak even after repositioning the AP. We likely need an additional access point installed there.","negative","network","2025-11-29T13:24:20Z"
+1179,"Removed multiple adware programs and browser extensions from the user’s PC. After cleanup, CPU usage dropped from 90% idle to around 10%.","positive","malware_cleanup","2025-11-29T13:40:57Z"
+1180,"Couldn’t complete the onsite visit because security hadn’t been informed. Spent 30 minutes at reception waiting for clearance. This should be coordinated better.","negative","coordination","2025-11-29T13:55:46Z"
+1181,"Helped the finance team with a shared mailbox issue. Recreated the Outlook profile and reattached the mailbox; all historical emails re-synced correctly.","positive","email_support","2025-11-29T14:09:08Z"
+1182,"User’s webcam problem was due to privacy shutter being closed, not a driver issue. Showed them how to check it next time to avoid unnecessary tickets.","positive","user_education","2025-11-29T14:21:39Z"
+1183,"Server room temperature sensor kept sending false alerts because the probe was touching the exhaust of a backup UPS. Moved it to a neutral area and alerts stopped.","positive","environmental","2025-11-29T14:33:54Z"
+1184,"Imaging station froze twice during deployment. Logs suggest a storage performance issue on the deployment server, not with the client device.","neutral","infrastructure","2025-11-29T14:48:12Z"
+1185,"User was frustrated because their ticket had been open for 5 days with no update. The delay was caused by pending vendor confirmation that no one followed up on.","negative","sla","2025-11-29T15:01:25Z"
+1186,"Repaired a frayed power cable on a monitor and labeled it for replacement. It’s safe for now, but this should be swapped out within the week.","neutral","hardware_maintenance","2025-11-29T15:15:47Z"
+1187,"Configured a static IP for the network printer as requested by IT management. Updated DNS records and verified printing from three different VLANs.","positive","network","2025-11-29T15:30:02Z"
+1188,"Couldn’t join the new laptop to the domain because we hit the machine account quota for that OU. Notified the AD team to clean up stale objects.","neutral","identity_access","2025-11-29T15:44:59Z"
+1189,"Helped a remote user with a failing USB‑C dock. Firmware update fixed the intermittent display issues without needing a replacement dock.","positive","remote_support","2025-11-29T15:58:21Z"
+1190,"The floor map in the ticket system is outdated, which made it hard to locate the user’s desk. Had to call them again for directions.","negative","documentation","2025-11-29T16:13:43Z"
+1191,"Ran full SMART diagnostics on the user’s HDD and found multiple reallocated sectors. Backed up the data and requested a drive replacement.","neutral","hardware_diagnostics","2025-11-29T16:28:37Z"
+1192,"The new barcode scanner integrated with the inventory system without any special drivers. Just had to configure the prefix and suffix for the fields.","positive","peripheral_setup","2025-11-29T16:42:15Z"
+1193,"User claimed they lost access to their shared drive, but permissions had not changed. Their drive letter mapping was overwritten by a USB device. Remapped successfully.","positive","file_services","2025-11-29T16:57:09Z"
+1194,"Tried to assist with a third‑party app issue, but it’s completely unsupported and undocumented. Had to direct the user back to the vendor.","negative","third_party","2025-11-29T17:12:40Z"
+1195,"Restored a deleted folder from last night’s backup within 10 minutes. User was relieved because it contained a month of project work.","positive","backup_restore","2025-11-29T17:25:33Z"
+1196,"Could not upgrade the OS because the laptop is still running a legacy line‑of‑business app that doesn’t support newer versions. Documented the dependency.","neutral","compatibility","2025-11-29T17:39:58Z"
+1197,"Discovered that several network jacks in the new office wing are mislabeled. This is already causing confusion and longer troubleshooting times.","negative","infrastructure","2025-11-29T17:53:20Z"
+1198,"Calibrated the color settings on the design team’s monitors. They noticed an improvement immediately and were satisfied with the result.","positive","specialist_support","2025-11-29T18:08:47Z"
+1199,"User couldn’t open shared calendar because it exceeded Outlook’s old size limits. Cleaned up old entries and re-synced; performance improved.","positive","email_support","2025-11-29T18:23:05Z"
+1200,"The ticket description said ‘Internet down’ but it turned out to be just the user’s browser set to offline mode. Switched it back and confirmed access.","positive","user_support","2025-11-29T18:36:30Z"
+1201,"Could not fully diagnose the intermittent blue screens because the user kept postponing reboots. We still don’t have recent dump files to analyze.","negative","user_compliance","2025-11-29T18:49:55Z"
+1202,"Rolled out the new printer driver via GPO. So far, no error reports, and print queues look stable.","positive","software_update","2025-11-29T19:05:12Z"
+1203,"User’s headset issue was due to the mute switch on the cable. Showed them how to check both software and hardware mute in the future.","positive","user_training","2025-11-29T19:18:39Z"
+1204,"The phone system outage was outside of our control (carrier issue), but users still blamed IT because communication about the incident was slow.","negative","communication","2025-11-29T19:32:27Z"
+1205,"Replaced a damaged RJ45 connector on a patch cable. Connection speed went from 100 Mbps back to 1 Gbps and packet loss disappeared.","positive","network","2025-11-29T19:47:03Z"
+1206,"Couldn’t install the requested utility because it conflicts with our endpoint protection policy. Suggested a supported alternative instead.","neutral","policy","2025-11-29T20:01:44Z"
+1207,"Helped a remote user switch from PPTP VPN to the new IKEv2 profile. After that, their connection stopped dropping and speed improved.","positive","remote_support","2025-11-29T20:16:31Z"
+1208,"Spent too long chasing a DNS issue only to find out the user had manually set a public DNS server on their laptop. Reset to automatic and problem solved.","negative","configuration","2025-11-29T20:31:12Z"
+1209,"User praised how quickly we handled their laptop swap. Old device was collected and new one was fully configured within the same afternoon.","positive","hardware_replacement","2025-11-29T20:45:56Z"
+1210,"The remote management tool was unavailable during my shift, which slowed down troubleshooting for several remote tickets.","negative","tooling","2025-11-29T21:02:47Z"
+1211,"Configured BitLocker on three new laptops and stored the recovery keys in Azure AD. Verified they can be retrieved by support staff.","positive","security","2025-11-29T21:18:05Z"
+1212,"Could not resolve the CRM login issue because the vendor’s authentication servers were down. Provided status page link to the user.","neutral","third_party","2025-11-29T21:34:18Z"
+1213,"Set up the conference room PC with the new video conferencing app and ran a full test call. Audio and video quality were both good.","positive","meeting_room","2025-11-29T21:49:09Z"
+1214,"User’s laptop fan was clogged with dust. After cleaning, the system became much quieter and CPU temps dropped by around 15°C under load.","positive","hardware_maintenance","2025-11-29T22:03:44Z"
+1215,"We are still missing a standardized checklist for onboarding devices. Each tech does things slightly differently, which causes inconsistencies.","negative","process","2025-11-29T22:18:40Z"
+1216,"The shared drive slowness was traced to a single user running large queries directly from the network share. Coordinated with their manager to change the workflow.","neutral","performance","2025-11-29T22:32:21Z"
+1217,"Reinstalled the graphics driver on a CAD workstation. Crashes have stopped and the user confirmed they can work without interruptions.","positive","specialist_support","2025-11-29T22:47:58Z"
+1218,"Couldn’t complete the memory upgrade because the desktop uses low-profile modules and only standard DIMMs were available in stock.","negative","inventory","2025-11-29T23:02:34Z"
+1219,"Reset MFA for a traveling employee who got a new phone and had no backup codes. Verified their identity via manager and HR records before proceeding.","positive","security","2025-11-29T23:18:01Z"
+1220,"Ticket contained multiple unrelated requests (hardware issue, software install, and access change). Had to split into three separate tickets manually.","negative","ticket_quality","2025-11-29T23:33:45Z"
+1221,"Patched the switch firmware during the approved maintenance window with no unexpected impact. All ports came back online cleanly.","positive","network","2025-11-30T00:06:11Z"
+1222,"User’s complaint about ‘laggy mouse’ was actually due to the laptop being connected to a 4K display using an old adapter. Replaced with a supported one and problem went away.","positive","peripheral_support","2025-11-30T00:19:39Z"
+1223,"Unable to migrate the user’s PST file in one shot because it was over 40 GB. Scheduled staged migrations overnight to avoid downtime.","neutral","email_migration","2025-11-30T00:34:52Z"
+1224,"Discovered that the label ‘Do not power off’ on a test server is outdated. This has been preventing timely maintenance.","negative","documentation","2025-11-30T00:47:30Z"
+1225,"Ran a successful test of the new backup agent on one workstation. Logs show correct snapshots and restore points.","positive","backup","2025-11-30T01:02:16Z"
+1226,"User didn’t realize their OneDrive files were set to online-only. Enabled ‘Always keep on this device’ for key folders to avoid confusion.","positive","user_training","2025-11-30T01:16:40Z"
+1227,"Could not access the building’s patch panel area for re-cabling because facilities had locked it without leaving a key with IT.","negative","coordination","2025-11-30T01:30:59Z"
+1228,"Installed the new time-tracking app on kiosk PCs and locked them down with a local policy. Staff tested and confirmed it meets their needs.","positive","software_deployment","2025-11-30T01:44:33Z"
+1229,"User’s slow remote desktop session was due to them connecting over a weak home Wi‑Fi signal. Advised wired connection; after that performance improved significantly.","neutral","remote_support","2025-11-30T02:01:12Z"
+1230,"Found and fixed a loose SFP module on the edge switch that was causing intermittent link drops to one office. Connection has been stable for 3 hours now.","positive","network","2025-11-30T02:16:05Z"
+1231,"Our imaging documentation doesn’t mention what to do if the device is already encrypted. Had to improvise and then update my own notes.","negative","documentation","2025-11-30T02:31:27Z"
+1232,"Replaced a cracked laptop screen onsite. User was back up and running within 25 minutes and was very appreciative of the quick turnaround.","positive","hardware_repair","2025-11-30T02:45:19Z"
+1233,"Could not resolve the unusual application crash; logs are inconclusive. Escalated to the app vendor with full dumps attached.","neutral","third_party","2025-11-30T03:01:44Z"
+1234,"Configured an additional mailbox for the team lead and set the correct send-as permissions. Test emails sent and received successfully.","positive","email_support","2025-11-30T03:15:58Z"
+1235,"Ticket response SLA was technically met, but the user felt ignored because we only sent template updates at first. More personalized communication would help.","negative","communication","2025-11-30T03:30:41Z"
+1236,"User accidentally deleted their local Outlook profile. Recreated it and re-synced. No data lost since everything was on Exchange Online.","positive","email_support","2025-11-30T03:45:33Z"
+1237,"Couldn’t install printer drivers for a locked-down user because the UAC credentials provided were wrong. Had to wait 20 minutes for their manager to respond.","negative","access_control","2025-11-30T04:01:08Z"
+1238,"Helped user understand how to use Teams instead of email for quick questions. They commented that chat is already saving them time.","positive","user_training","2025-11-30T04:16:27Z"
+1239,"Server backup failed because the external drive was full. Cleared old retention points and reran backup successfully.","neutral","backup","2025-11-30T04:32:59Z"
+1240,"The new batch of laptops arrived with outdated BIOS versions. This will add extra time to each deployment for mandatory updates.","negative","procurement","2025-11-30T04:48:21Z"
+1241,"Repaired a stuck key on a mechanical keyboard with careful cleaning. User preferred this over swapping the whole unit.","positive","hardware_maintenance","2025-11-30T05:01:54Z"
+1242,"User’s complaint about ‘no sound’ was due to HDMI audio being selected instead of the laptop speakers. Switched default device and tested.","positive","user_support","2025-11-30T05:16:03Z"
+1243,"Couldn’t decommission the old server today because some services are still pointing to its IP. Need a proper dependency list before proceeding.","negative","planning","2025-11-30T05:30:37Z"
+1244,"Re-applied group policies using gpupdate /force and rebooted. This resolved several missing drive mappings for the user.","positive","os_configuration","2025-11-30T05:46:10Z"
+1245,"Ticket escalation path is unclear for after-hours incidents. Had to call around manually to find someone with the right permissions.","negative","process","2025-11-30T06:01:59Z"
+1246,"Enabled ‘Find My Device’ on the new fleet of laptops as requested. Verified it reports correct locations in the admin portal.","positive","asset_management","2025-11-30T06:15:46Z"
+1247,"User’s ‘frozen screen’ was just a very slow Excel macro. Showed them how to monitor progress and consider splitting their workbook.","neutral","user_training","2025-11-30T06:30:30Z"
+1248,"Could not install the requested browser plugin because it violates security policies. Provided a documented explanation and alternatives.","neutral","security","2025-11-30T06:45:16Z"
+1249,"Replaced a burned-out power strip under a cluster of desks and labeled the new one with the circuit ID for future reference.","positive","facility_it","2025-11-30T07:01:40Z"
+1250,"Initial information in the ticket said ‘won’t turn on’ but didn’t mention the liquid spill. That detail only came up onsite, which changes the whole process.","negative","ticket_quality","2025-11-30T07:17:04Z"
+1251,"User forgot their Windows PIN while working remotely. Walked them through using their password instead and then resetting the PIN.","positive","identity_access","2025-11-30T07:31:27Z"
+1252,"The handheld scanners in the loading bay lose Wi‑Fi when trucks are parked nearby. Likely RF interference; needs a site survey.","negative","network","2025-11-30T07:45:42Z"
+1253,"Successfully migrated a user from local profile to Azure AD joined account with minimal downtime. All core apps are working fine.","positive","identity_access","2025-11-30T08:01:18Z"
+1254,"Found that two helpdesk categories mean the same thing but route to different teams. This is confusing and leads to misrouted tickets.","negative","process","2025-11-30T08:16:59Z"
+1255,"Helped user clear a nearly full C: drive by moving personal data to OneDrive and removing temporary files. Performance improved afterwards.","positive","os_maintenance","2025-11-30T08:32:47Z"
+1256,"Could not get the projector to display via HDMI, but it worked over VGA. Likely a failing HDMI port on the projector itself.","neutral","meeting_room","2025-11-30T08:47:25Z"
+1257,"User appreciated that I documented the steps for connecting to the new VPN so they can help colleagues without opening more tickets.","positive","user_training","2025-11-30T09:02:54Z"
+1258,"The shared folder permission request form is missing a field for data sensitivity, which would help us apply correct access levels.","neutral","process","2025-11-30T09:18:40Z"
+1259,"Replaced a noisy system fan in a small office server. Temperatures are now back within normal operating range.","positive","hardware_maintenance","2025-11-30T09:31:51Z"
+1260,"Couldn’t reset the user’s password immediately due to a global password policy sync issue. Had to wait for directory services to stabilize.","negative","infrastructure","2025-11-30T09:47:13Z"
+1261,"Fixed an issue where Zoom kept defaulting to the wrong microphone. Adjusted both Windows and app settings per user’s preference.","positive","remote_meetings","2025-11-30T10:02:44Z"
+1262,"The asset tag on the laptop did not match any entry in the inventory system. This made it harder to track warranty info.","negative","asset_management","2025-11-30T10:18:26Z"
+1263,"Helped marketing upload large files via a managed file transfer tool instead of email attachments. They said it’s actually easier than before.","positive","user_training","2025-11-30T10:31:58Z"
+1264,"Could not print test labels because we ran out of label rolls. Need a small buffer stock onsite to avoid delays.","negative","inventory","2025-11-30T10:47:39Z"
+1265,"Updated a legacy script to use the new network path after the file server migration. Daily reports are now running successfully again.","positive","scripting","2025-11-30T11:03:22Z"
+1266,"User’s frequent disconnections from Wi‑Fi were due to power saving features disabling the network adapter. Disabled that option and stability returned.","positive","os_configuration","2025-11-30T11:19:11Z"
+1267,"The instructions for setting up out‑of‑office replies are buried in an old knowledge base article. Several users asked the same question today.","negative","documentation","2025-11-30T11:35:42Z"
+1268,"Successfully cloned a failing drive using a sector‑by‑sector copy, preserving the user’s full environment with no data loss.","positive","data_recovery","2025-11-30T11:51:17Z"
+1269,"Couldn’t enroll a BYOD phone in MDM because it was rooted. Security policy blocks this, and the user wasn’t willing to reset it.","neutral","security","2025-11-30T12:06:59Z"
+1270,"Helped a visually impaired user increase system font sizes and enable high-contrast mode. They reported a big improvement in usability.","positive","accessibility","2025-11-30T12:22:14Z"
+1271,"The new floor plan includes no power outlets near where users actually sit. They rely heavily on extension cords, which isn’t ideal.","negative","facility_it","2025-11-30T12:38:08Z"
+1272,"Configured a guest Wi‑Fi account for visitors and documented the process for reception to self‑service in the future.","positive","network","2025-11-30T12:54:41Z"
+1273,"Could not change the app setting the user requested because it’s locked at the tenant level. Explained and escalated to the platform owner.","neutral","policy","2025-11-30T13:10:12Z"
+1274,"Repaired bent pins on a desktop’s USB port and confirmed proper operation with multiple devices. No board replacement required.","positive","hardware_repair","2025-11-30T13:24:59Z"
+1275,"The printer installed fine, but the location field in the queue name is misleading. Users keep sending jobs to the wrong floor.","negative","naming","2025-11-30T13:40:31Z"
+1276,"Helped the user set up a synchronized OneNote notebook instead of storing notes only on their desktop. They liked the cross-device access.","positive","user_training","2025-11-30T13:55:06Z"
+1277,"Could not reach the user after multiple attempts for remote support. Ticket stayed open longer than necessary because of missed calls.","neutral","user_availability","2025-11-30T14:09:54Z"
+1278,"Replaced degraded RAID disk and verified rebuild status in the controller. No data loss and performance remained acceptable during rebuild.","positive","storage","2025-11-30T14:25:37Z"
+1279,"Our remote assistance tool struggles with very high DPI monitors, making it hard to see what users are clicking. Slows troubleshooting down.","negative","tooling","2025-11-30T14:41:02Z"
+1280,"User was happy that I followed up the next day to confirm their intermittent issue hadn’t returned. They felt well looked after.","positive","customer_service","2025-11-30T14:55:29Z"
+1281,"Couldn’t install the given software because the download link in the ticket was expired. Had to request an updated link.","negative","third_party","2025-11-30T15:10:48Z"
+1282,"Adjusted power settings on a shared PC so it doesn’t go to sleep during long presentations. Confirmed with the user this solves their issue.","positive","meeting_room","2025-11-30T15:27:13Z"
+1283,"The escalation notes from the previous shift were incomplete. I had to re-check steps they claimed to have done.","negative","handover","2025-11-30T15:42:55Z"
+1284,"Helped user configure email signatures according to the new company template. Took time, but now their whole team wants the same setup.","positive","user_support","2025-11-30T15:59:02Z"
+1285,"Could not get the Bluetooth headset to pair because the laptop’s Bluetooth module is disabled at BIOS level. Need approval to change that setting.","neutral","hardware_configuration","2025-11-30T16:14:38Z"
+1286,"Installed the required browser extension and confirmed it works with the single sign-on flow. User can now access the web app as expected.","positive","software_installation","2025-11-30T16:29:21Z"
+1287,"Ticket queue spiked right after a planned change, but there was no broadcast message to users. More proactive comms would reduce low‑value tickets.","negative","communication","2025-11-30T16:45:16Z"
+1288,"Performed a full reset of the docking station which resolved flickering screens for the user. They had been struggling with this for weeks.","positive","peripheral_support","2025-11-30T17:02:01Z"
+1289,"Could not replace the laptop keyboard onsite because the necessary Torx screwdriver wasn’t in the standard toolkit. Need a small tool upgrade.","negative","tooling","2025-11-30T17:15:47Z"
+1290,"Verified that all critical patches installed successfully on the kiosk PCs and that kiosk mode still works as designed.","positive","software_update","2025-11-30T17:31:30Z"
+1291,"User’s slowness complaint came from running out of RAM with many browser tabs open. Showed them Task Manager and suggested using fewer tabs.","neutral","user_training","2025-11-30T17:47:22Z"
+1292,"Replaced an old unmanaged switch with a managed one and configured VLANs properly. Network segmentation is now enforced as requested by security.","positive","network","2025-11-30T18:02:54Z"
+1293,"Could not complete the scheduled firmware update because the customer’s change approver didn’t sign off in time.","negative","change_management","2025-11-30T18:18:31Z"
+1294,"Helped user set up mail rules to automatically file notifications into folders. They reported inbox is now much more manageable.","positive","email_support","2025-11-30T18:33:27Z"
+1295,"The imaging server is occasionally saturating the uplink during the day, which impacts normal traffic. Imaging should be limited to off‑hours.","negative","capacity","2025-11-30T18:49:09Z"
+1296,"Reinstalled the VPN client and imported the latest configuration file. Connection became stable and no more auth errors reported.","positive","remote_support","2025-11-30T19:03:58Z"
+1297,"Couldn’t change the printer default settings centrally due to old firmware. Recommended planning an upgrade for all units of that model.","neutral","peripheral_support","2025-11-30T19:19:42Z"
+1298,"User appreciated that I stayed on the call until their large file fully uploaded, just to be sure they could see it on the other side.","positive","customer_service","2025-11-30T19:35:12Z"
+1299,"The instructions in the ticket said to set a static IP, but our policy is DHCP only. Clarified with network team before proceeding.","neutral","policy","2025-11-30T19:51:41Z"
+1300,"Re-terminated a loose keystone jack that was causing intermittent connectivity at a single desk. Link quality is now good and stable.","positive","network","2025-11-30T20:07:23Z"
+1301,"Could not get clear requirements from the user about what ‘too slow’ meant. After basic checks, nothing obvious was wrong. Left monitoring tools in place.","neutral","diagnostics","2025-11-30T20:23:55Z"
+1302,"Helped a new starter log into all required systems on their first morning. They were fully operational by 10am and gave positive feedback.","positive","onboarding","2025-11-30T20:39:41Z"
+1303,"The cable management in the main rack is still very messy, making it hard to trace connections quickly during incidents.","negative","infrastructure","2025-11-30T20:55:10Z"
+1304,"Installed the latest graphics driver for the video editing PC and enabled hardware acceleration. Rendering time improved notably.","positive","specialist_support","2025-11-30T21:11:24Z"
+1305,"Could not restore the previous version of the file because it was created after the last backup snapshot. Explained retention limits to user.","negative","backup","2025-11-30T21:27:09Z"
+1306,"Set up a shared mailbox with appropriate permissions for the support team, including send-as and full access. Tested from two accounts.","positive","email_support","2025-11-30T21:43:30Z"
+1307,"User’s webcam freezing during calls was traced to a cheap USB hub. Plugging directly into the laptop resolved the issue.","positive","peripheral_support","2025-11-30T21:59:02Z"
+1308,"Documentation for resetting network printers to factory defaults is inconsistent between brands. Spent extra time searching for manuals.","negative","documentation","2025-11-30T22:14:56Z"
+1309,"Repaired a loose hinge on a laptop and ensured the display cable wasn’t pinched. User happy and no flickering present.","positive","hardware_repair","2025-11-30T22:29:38Z"
+1310,"Could not join the device to Azure AD because it had already been enrolled under a different tenant. Required a full wipe and re-enroll.","neutral","identity_access","2025-11-30T22:44:21Z"
+1311,"User liked that I followed up with an email summary of the troubleshooting steps, so they can refer to it if the issue happens again.","positive","customer_service","2025-11-30T22:59:17Z"
+1312,"Our password reset IVR still references an old support number. This confuses users and increases call transfers.","negative","communication","2025-11-30T23:13:40Z"
+1313,"Successfully adjusted BIOS boot order and disabled legacy boot on a batch of laptops to align with new security standards.","positive","hardware_configuration","2025-11-30T23:27:19Z"
+1314,"Could not close the ticket yet because we’re waiting on facilities to install a new power outlet for the access point.","neutral","dependency","2025-11-30T23:41:56Z"
+1315,"Helped user configure dual monitors with the correct scaling. They said they can work much more comfortably now.","positive","user_support","2025-11-30T23:57:11Z"
+1316,"The warranty lookup portal was down while I was onsite, so I couldn’t confirm coverage for the laptop repair immediately.","negative","third_party","2025-12-01T00:12:49Z"
+1317,"Replaced a defunct UPS battery and ran a quick runtime test. The server stayed up for the expected duration.","positive","power","2025-12-01T00:28:21Z"
+1318,"User’s RDP window was very laggy because they were connecting over VPN from a hotel Wi‑Fi. Explained limitations and suggested offline work when possible.","neutral","remote_support","2025-12-01T00:43:36Z"
+1319,"The asset management system is slow to update status after we close tickets, which sometimes causes confusion about device availability.","negative","asset_management","2025-12-01T00:59:27Z"
+1320,"Helped user set up encrypted email for external communication. Test messages successfully sent and received with correct encryption banner.","positive","security","2025-12-01T01:15:05Z"
+1321,"Could not install the requested app on a thin client because storage is too limited. Suggested using the remote desktop server instead.","neutral","thin_client","2025-12-01T01:30:44Z"
+1322,"Installed the latest Windows feature update overnight on several laptops with no reported issues the next day.","positive","software_update","2025-12-01T01:46:12Z"
+1323,"Some users still don’t know about the self-service password reset portal and keep calling the helpdesk instead.","negative","user_awareness","2025-12-01T02:01:26Z"
+1324,"Reconfigured Outlook cached mode settings to improve performance on a very large mailbox. User noticed faster search immediately.","positive","email_support","2025-12-01T02:16:49Z"
+1325,"Unable to resolve the CRM timeout problems as they are due to upstream API limits. Escalated to app owner and vendor.","neutral","third_party","2025-12-01T02:32:31Z"
+1326,"Helped warehouse staff understand how to properly shutdown thin clients instead of just cutting power, which had been causing corruption.","positive","user_training","2025-12-01T02:48:15Z"
+1327,"Ticket categorization is inconsistent, which makes reporting difficult and hides recurring issues.","negative","process","2025-12-01T03:03:28Z"
+1328,"Replaced a failing laptop fan and cleaned out debris. Temperature and noise levels returned to normal.","positive","hardware_maintenance","2025-12-01T03:18:59Z"
+1329,"Could not install the scanner software because it requires local admin rights. Waiting on approval from security.","neutral","access_control","2025-12-01T03:34:41Z"
+1330,"User was pleased that I set up quick access links in File Explorer to their most-used folders. They said it saves them clicks.","positive","user_support","2025-12-01T03:50:27Z"
+1331,"Network diagram still shows an old switch that has been decommissioned for months. This led me to check the wrong rack first.","negative","documentation","2025-12-01T04:06:04Z"
+1332,"Helped user sync their Teams status with Outlook calendar. They didn’t realize meetings automatically set them to busy.","positive","user_training","2025-12-01T04:21:38Z"
+1333,"Could not deploy the new version of the app to one PC because of disk encryption conflicts. Escalated to engineering for guidance.","neutral","compatibility","2025-12-01T04:37:12Z"
+1334,"Completed cabling for two new workstations with proper labeling and testing. Both ports passed certification.","positive","infrastructure","2025-12-01T04:52:44Z"
+1335,"The handheld device management tool is clunky and slow. It adds overhead for even simple updates like Wi‑Fi profiles.","negative","tooling","2025-12-01T05:08:21Z"
+1336,"User appreciated that I took the time to explain why local admin rights are restricted rather than just saying no.","positive","customer_service","2025-12-01T05:24:02Z"
+1337,"Could not investigate the reported slowness fully because user powered off their machine mid-diagnostics.","negative","user_compliance","2025-12-01T05:39:45Z"
+1338,"Repaired a jammed paper tray in the main office printer and tested multiple page sizes. No further jams reported.","positive","peripheral_support","2025-12-01T05:55:17Z"
+1339,"Helpdesk portal doesn’t enforce mandatory fields for device ID, which leads to a lot of incomplete tickets.","negative","ticket_quality","2025-12-01T06:11:52Z"
+1340,"Helped a user configure Focus Assist in Windows to reduce notification noise during presentations. They were happy with the result.","positive","user_support","2025-12-01T06:27:33Z"
+1456,"User repeatedly escalated directly to management instead of updating the ticket. This disrupted normal workflow and created duplicate efforts.","negative","communication","2025-12-01T23:10:18Z"
+1457,"Final check of all floor printers before month-end showed no error states and sufficient toner levels. Ready for heavy usage tomorrow.","positive","peripheral_maintenance","2025-12-01T23:22:41Z"
+1458,"Could not validate the reported data sync issue; logs show the last three syncs completed without errors. Suggested user captures timestamps next time.","neutral","diagnostics","2025-12-01T23:35:07Z"
+1459,"Overall, tickets today were well-described and included screenshots, which made remote troubleshooting much faster.","positive","ticket_quality","2025-12-01T23:47:55Z"
+1460,"User's laptop booted normally after restart.","positive","diagnostics","2025-12-01T08:01:00Z"
+1461,"Could not reach the user by phone for follow-up.","neutral","user_availability","2025-12-01T08:02:00Z"
+1462,"Printer started working after reinstalling the driver.","positive","peripheral_support","2025-12-01T08:03:00Z"
+1463,"Wi‑Fi signal is weak in the meeting room.","negative","network","2025-12-01T08:04:00Z"
+1464,"Reset the user's password successfully.","positive","identity_access","2025-12-01T08:05:00Z"
+1465,"User provided no error screenshot in the ticket.","negative","ticket_quality","2025-12-01T08:06:00Z"
+1466,"Email issue resolved by recreating Outlook profile.","positive","email_support","2025-12-01T08:07:00Z"
+1467,"Could not install app due to missing license.","negative","software_installation","2025-12-01T08:08:00Z"
+1468,"Network cable was unplugged; reconnected and fixed.","positive","network","2025-12-01T08:09:00Z"
+1469,"User was not at their desk at the scheduled time.","neutral","user_availability","2025-12-01T08:10:00Z"
+1470,"Mouse replaced and user confirmed it works.","positive","hardware_repair","2025-12-01T08:11:00Z"
+1471,"Slow PC improved after removing startup apps.","positive","os_maintenance","2025-12-01T08:12:00Z"
+1472,"Issue could not be reproduced during testing.","neutral","diagnostics","2025-12-01T08:13:00Z"
+1473,"VPN connection stable after client reinstall.","positive","remote_support","2025-12-01T08:14:00Z"
+1474,"User ticket had unclear problem description.","negative","ticket_quality","2025-12-01T08:15:00Z"
+1475,"Monitor display fixed by reseating the cable.","positive","hardware_support","2025-12-01T08:16:00Z"
+1476,"Could not proceed because admin rights missing.","negative","access_control","2025-12-01T08:17:00Z"
+1477,"User happy with quick response time.","positive","customer_service","2025-12-01T08:18:00Z"
+1478,"Printer offline due to power switch turned off.","positive","peripheral_support","2025-12-01T08:19:00Z"
+1479,"No backup available for the deleted file.","negative","backup","2025-12-01T08:20:00Z"
+1480,"Wi‑Fi password reset and shared with user.","positive","network","2025-12-01T08:21:00Z"
+1481,"System updated and rebooted without issues.","positive","software_update","2025-12-01T08:22:00Z"
+1482,"User canceled the request before work started.","neutral","process","2025-12-01T08:23:00Z"
+1483,"Headset audio worked after selecting correct device.","positive","peripheral_support","2025-12-01T08:24:00Z"
+1484,"Could not fix problem; escalated to vendor.","neutral","third_party","2025-12-01T08:25:00Z"
+1485,"User pleased with new keyboard installation.","positive","hardware_repair","2025-12-01T08:26:00Z"
+1486,"Ticket delayed due to missing approval.","negative","process","2025-12-01T08:27:00Z"
+1487,"Disk space issue solved by clearing temp files.","positive","os_maintenance","2025-12-01T08:28:00Z"
+1488,"User did not follow instructions sent by email.","negative","user_compliance","2025-12-01T08:29:00Z"
+1489,"Login issue resolved after account unlock.","positive","identity_access","2025-12-01T08:30:00Z"
+1490,"Could not connect remotely; device offline.","neutral","remote_support","2025-12-01T08:31:00Z"
+1491,"Application opened normally after reboot.","positive","diagnostics","2025-12-01T08:32:00Z"
+1492,"Ticket had correct device details and photos.","positive","ticket_quality","2025-12-01T08:33:00Z"
+1493,"Printer jam cleared and test page printed.","positive","peripheral_support","2025-12-01T08:34:00Z"
+1494,"Issue outside our support scope; informed user.","neutral","policy","2025-12-01T08:35:00Z"
+1495,"User showed satisfaction with clear explanation.","positive","customer_service","2025-12-01T08:36:00Z"
+1496,"Network drop traced to faulty patch cable.","negative","network","2025-12-01T08:37:00Z"
+1497,"Password reset link worked on second attempt.","neutral","identity_access","2025-12-01T08:38:00Z"
+1498,"Slow internet caused by large background download.","negative","network","2025-12-01T08:39:00Z"
+1499,"User trained on using self-service portal.","positive","user_training","2025-12-01T08:40:00Z"
+1500,"Could not install tool on unsupported OS.","negative","compatibility","2025-12-01T08:41:00Z"
+1501,"Outlook started syncing after profile repair.","positive","email_support","2025-12-01T08:42:00Z"
+1502,"User declined suggested time for onsite visit.","neutral","user_availability","2025-12-01T08:43:00Z"
+1503,"Blu‑ray drive ejected stuck disc successfully.","positive","hardware_repair","2025-12-01T08:44:00Z"
+1504,"Phone extension changed as requested.","positive","telephony","2025-12-01T08:45:00Z"
+1505,"User provided old hostname; slowed diagnosis.","negative","documentation","2025-12-01T08:46:00Z"
+1506,"Wi‑Fi card driver updated successfully.","positive","network","2025-12-01T08:47:00Z"
+1507,"Could not find user in directory; name mismatch.","neutral","identity_access","2025-12-01T08:48:00Z"
+1508,"User confirmed blue screen has not returned.","positive","diagnostics","2025-12-01T08:49:00Z"
+1509,"Ticket reopened due to recurring problem.","negative","quality","2025-12-01T08:50:00Z"
+1510,"Monitor replaced under warranty.","positive","hardware_replacement","2025-12-01T08:51:00Z"
+1511,"No issues found in server log review.","neutral","diagnostics","2025-12-01T08:52:00Z"
+1512,"User satisfied with new email distribution list.","positive","email_support","2025-12-01T08:53:00Z"
+1513,"Could not access server due to maintenance window.","neutral","infrastructure","2025-12-01T08:54:00Z"
+1514,"Printer queue cleared and jobs re-sent.","positive","peripheral_support","2025-12-01T08:55:00Z"
+1515,"Laptop battery health reported as poor.","negative","hardware_diagnostics","2025-12-01T08:56:00Z"
+1516,"User trained on basic VPN usage.","positive","user_training","2025-12-01T08:57:00Z"
+1517,"No backup schedule defined for this folder.","negative","backup","2025-12-01T08:58:00Z"
+1518,"Headset replaced due to broken microphone.","positive","hardware_replacement","2025-12-01T08:59:00Z"
+1519,"Could not continue; user left meeting early.","neutral","user_availability","2025-12-01T09:00:00Z"
+1520,"Antivirus scan completed with no threats.","positive","security","2025-12-01T09:01:00Z"
+1521,"Old browser version caused login issue.","negative","software_update","2025-12-01T09:02:00Z"
+1522,"Updated browser fixed login immediately.","positive","software_update","2025-12-01T09:03:00Z"
+1523,"User confirmed they understand new process.","positive","user_training","2025-12-01T09:04:00Z"
+1524,"Could not locate asset tag in system.","negative","asset_management","2025-12-01T09:05:00Z"
+1525,"Wi‑Fi connection stable after AP reboot.","positive","network","2025-12-01T09:06:00Z"
+1526,"Ticket wrongly assigned to our team.","negative","routing","2025-12-01T09:07:00Z"
+1527,"Supervisor access granted as requested.","positive","identity_access","2025-12-01T09:08:00Z"
+1528,"User did not respond to chat assistance.","neutral","user_availability","2025-12-01T09:09:00Z"
+1529,"Shared drive mapping created successfully.","positive","file_services","2025-12-01T09:10:00Z"
+1530,"Cannot install plugin due to security policy.","negative","security","2025-12-01T09:11:00Z"
+1531,"User acknowledged security restriction.","neutral","security","2025-12-01T09:12:00Z"
+1532,"Laptop fan noise reduced after cleaning.","positive","hardware_maintenance","2025-12-01T09:13:00Z"
+1533,"Could not troubleshoot; user shut down PC.","negative","user_compliance","2025-12-01T09:14:00Z"
+1534,"Printer added via IP and tested OK.","positive","peripheral_support","2025-12-01T09:15:00Z"
+1535,"License expired for requested software.","negative","software_installation","2025-12-01T09:16:00Z"
+1536,"User praised quick password reset service.","positive","customer_service","2025-12-01T09:17:00Z"
+1537,"No hardware fault found after full test.","neutral","hardware_diagnostics","2025-12-01T09:18:00Z"
+1538,"Wi‑Fi dropout still happens occasionally.","negative","network","2025-12-01T09:19:00Z"
+1539,"Outlook search worked after reindex.","positive","email_support","2025-12-01T09:20:00Z"
+1540,"User gave only one-word description in ticket.","negative","ticket_quality","2025-12-01T09:21:00Z"
+1541,"Docking station replaced and tested.","positive","peripheral_support","2025-12-01T09:22:00Z"
+1542,"Could not access logs due to permission error.","negative","access_control","2025-12-01T09:23:00Z"
+1543,"Antivirus definitions updated successfully.","positive","security","2025-12-01T09:24:00Z"
+1544,"User did not attend scheduled remote session.","neutral","user_availability","2025-12-01T09:25:00Z"
+1545,"Temporary admin rights removed after task.","positive","security","2025-12-01T09:26:00Z"
+1546,"Phone not ringing due to DND enabled.","positive","telephony","2025-12-01T09:27:00Z"
+1547,"User surprised by long patch time.","neutral","software_update","2025-12-01T09:28:00Z"
+1548,"Wi‑Fi worked fine after forgetting network.","positive","network","2025-12-01T09:29:00Z"
+1549,"Ticket contained all required information.","positive","ticket_quality","2025-12-01T09:30:00Z"
+1550,"Could not reach site due to access rules.","negative","coordination","2025-12-01T09:31:00Z"
+1551,"Local profile recreated and logon faster.","positive","os_configuration","2025-12-01T09:32:00Z"
+1552,"User did not back up local documents.","negative","backup","2025-12-01T09:33:00Z"
+1553,"MFA reset completed and tested.","positive","security","2025-12-01T09:34:00Z"
+1554,"Laptop screen flicker gone after cable reseat.","positive","hardware_repair","2025-12-01T09:35:00Z"
+1555,"Could not install due to low disk space.","negative","os_maintenance","2025-12-01T09:36:00Z"
+1556,"User followed instructions and fixed error.","positive","user_training","2025-12-01T09:37:00Z"
+1557,"Printer default set to color as requested.","positive","peripheral_support","2025-12-01T09:38:00Z"
+1558,"Network share path provided was outdated.","negative","documentation","2025-12-01T09:39:00Z"
+1559,"Outlook add-in disabled and crash stopped.","positive","email_support","2025-12-01T09:40:00Z"
+1560,"User calm and cooperative during call.","positive","customer_service","2025-12-01T09:41:00Z"
+1561,"Could not reset due to unknown security answers.","negative","security","2025-12-01T09:42:00Z"
+1562,"Wi‑Fi roaming improved after driver update.","positive","network","2025-12-01T09:43:00Z"
+1563,"Ticket duplicated an existing one.","neutral","process","2025-12-01T09:44:00Z"
+1564,"User happy with dual monitor setup.","positive","user_support","2025-12-01T09:45:00Z"
+1565,"No response from vendor on open case.","negative","third_party","2025-12-01T09:46:00Z"
+1566,"File restored from recycle bin quickly.","positive","file_services","2025-12-01T09:47:00Z"
+1567,"Could not reproduce Teams call problem.","neutral","remote_meetings","2025-12-01T09:48:00Z"
+1568,"Password policy explained to user.","positive","security","2025-12-01T09:49:00Z"
+1569,"Old shortcut caused user confusion.","negative","os_configuration","2025-12-01T09:50:00Z"
+1570,"RDP connection stable after router reboot.","positive","remote_support","2025-12-01T09:51:00Z"
+1571,"User left office before repair completed.","neutral","user_availability","2025-12-01T09:52:00Z"
+1572,"New user account created on time.","positive","onboarding","2025-12-01T09:53:00Z"
+1573,"Could not assign license; quota reached.","negative","licensing","2025-12-01T09:54:00Z"
+1574,"User thanked for clear step-by-step guide.","positive","customer_service","2025-12-01T09:55:00Z"
+1575,"Network port enabled and tested OK.","positive","network","2025-12-01T09:56:00Z"
+1576,"Ticket priority set too high for issue.","negative","process","2025-12-01T09:57:00Z"
+1577,"Local admin request denied by policy.","neutral","security","2025-12-01T09:58:00Z"
+1578,"Spare laptop issued and user satisfied.","positive","hardware_replacement","2025-12-01T09:59:00Z"
+1579,"Could not sign in due to expired contract.","negative","identity_access","2025-12-01T10:00:00Z"
+1580,"OneDrive sync fixed by sign-out and sign-in.","positive","cloud_storage","2025-12-01T10:01:00Z"
+1581,"User had multiple stale VPN profiles.","neutral","remote_support","2025-12-01T10:02:00Z"
+1582,"Old AP firmware noted for upgrade.","neutral","network","2025-12-01T10:03:00Z"
+1583,"Keycap reattached and keyboard fine now.","positive","hardware_repair","2025-12-01T10:04:00Z"
+1584,"User confused by two different portals.","negative","user_experience","2025-12-01T10:05:00Z"
+1585,"Printer renamed to match location label.","positive","naming","2025-12-01T10:06:00Z"
+1586,"Could not open logs; tool crashed.","negative","tooling","2025-12-01T10:07:00Z"
+1587,"User confirmed sound working in Teams.","positive","remote_meetings","2025-12-01T10:08:00Z"
+1588,"No patching needed; system up to date.","positive","software_update","2025-12-01T10:09:00Z"
+1589,"Laptop shut down due to low battery again.","negative","user_behavior","2025-12-01T10:10:00Z"
+1590,"Firewall rule added as requested.","positive","security","2025-12-01T10:11:00Z"
+1591,"Could not test fix; user offline.","neutral","user_availability","2025-12-01T10:12:00Z"
+1592,"External monitor detected after driver fix.","positive","hardware_support","2025-12-01T10:13:00Z"
+1593,"User used wrong URL for VPN portal.","negative","user_error","2025-12-01T10:14:00Z"
+1594,"Shortcut created on desktop for app.","positive","user_support","2025-12-01T10:15:00Z"
+1595,"Could not add mailbox; name conflict.","negative","email_support","2025-12-01T10:16:00Z"
+1596,"Old cached credentials cleared.","positive","identity_access","2025-12-01T10:17:00Z"
+1597,"User ticket referenced closed incident.","neutral","process","2025-12-01T10:18:00Z"
+1598,"Wi‑Fi password shared securely via SMS.","positive","security","2025-12-01T10:19:00Z"
+1599,"Laptop hinge crack noted for warranty claim.","negative","hardware_diagnostics","2025-12-01T10:20:00Z"
+1600,"Remote assistance session completed quickly.","positive","remote_support","2025-12-01T10:21:00Z"
+1601,"User did not have permission to install fonts.","negative","access_control","2025-12-01T10:22:00Z"
+1602,"Time zone corrected on laptop clock.","positive","os_configuration","2025-12-01T10:23:00Z"
+1603,"Ticket was opened for already solved issue.","neutral","process","2025-12-01T10:24:00Z"
+1604,"Teams status stuck; sign-out fixed it.","positive","remote_meetings","2025-12-01T10:25:00Z"
+1605,"Could not replicate audio delay reported.","neutral","diagnostics","2025-12-01T10:26:00Z"
+1606,"User trained on printing to secure queue.","positive","user_training","2025-12-01T10:27:00Z"
+1607,"Printer out of toner; replacement ordered.","negative","inventory","2025-12-01T10:28:00Z"
+1608,"Local folder redirected to network share.","positive","file_services","2025-12-01T10:29:00Z"
+1609,"Could not unlock account; locked by HR.","neutral","identity_access","2025-12-01T10:30:00Z"
+1610,"User happy with faster login after cleanup.","positive","os_maintenance","2025-12-01T10:31:00Z"
+1611,"No sign of malware in quick scan.","neutral","security","2025-12-01T10:32:00Z"
+1612,"User insisted on unsupported browser.","negative","compatibility","2025-12-01T10:33:00Z"
+1613,"New headset paired successfully via Bluetooth.","positive","peripheral_support","2025-12-01T10:34:00Z"
+1614,"Could not join machine to domain; name taken.","negative","identity_access","2025-12-01T10:35:00Z"
+1615,"User relieved after recovering draft email.","positive","email_support","2025-12-01T10:36:00Z"
+1616,"Shared calendar permissions adjusted.","positive","email_support","2025-12-01T10:37:00Z"
+1617,"Ticket auto-closed before user reply.","negative","process","2025-12-01T10:38:00Z"
+1618,"Wi‑Fi channel changed to reduce interference.","positive","network","2025-12-01T10:39:00Z"
+1619,"User rescheduled visit to next week.","neutral","user_availability","2025-12-01T10:40:00Z"
+1620,"Sticky keys disabled at user request.","positive","accessibility","2025-12-01T10:41:00Z"
+1621,"Could not import PST due to size limit.","negative","email_support","2025-12-01T10:42:00Z"
+1622,"New user mailbox created and tested.","positive","onboarding","2025-12-01T10:43:00Z"
+1623,"Antivirus blocked file; user informed.","neutral","security","2025-12-01T10:44:00Z"
+1624,"User satisfied with clear closure note.","positive","customer_service","2025-12-01T10:45:00Z"
+1625,"Laptop BIOS updated successfully.","positive","firmware_update","2025-12-01T10:46:00Z"
+1626,"Could not change setting; GPO enforced.","neutral","policy","2025-12-01T10:47:00Z"
+1627,"VPN profile removed at user exit.","positive","security","2025-12-01T10:48:00Z"
+1628,"User created duplicate folders by mistake.","negative","user_error","2025-12-01T10:49:00Z"
+1629,"Folder permissions fixed for new intern.","positive","identity_access","2025-12-01T10:50:00Z"
+1630,"Could not find old ticket reference.","neutral","documentation","2025-12-01T10:51:00Z"
+1631,"User confirmed remote printing now works.","positive","peripheral_support","2025-12-01T10:52:00Z"
+1632,"Teams add-in re-enabled in Outlook.","positive","email_support","2025-12-01T10:53:00Z"
+1633,"Drive mapping script failed on logon.","negative","os_configuration","2025-12-01T10:54:00Z"
+1634,"User apologized for late response.","neutral","customer_service","2025-12-01T10:55:00Z"
+1635,"Local cache cleared; app runs smoother.","positive","software_support","2025-12-01T10:56:00Z"
+1636,"Could not open email; corrupted attachment.","negative","email_support","2025-12-01T10:57:00Z"
+1637,"User happy with new shortcut keys tip.","positive","user_training","2025-12-01T10:58:00Z"
+1638,"Old network printer removed from list.","positive","peripheral_support","2025-12-01T10:59:00Z"
+1639,"Wrong time on server noted for NTP check.","negative","infrastructure","2025-12-01T11:00:00Z"
+1640,"Remote reboot solved simple application hang.","positive","remote_support","2025-12-01T11:01:00Z"
+1641,"Could not verify fix due to power outage.","neutral","infrastructure","2025-12-01T11:02:00Z"
+1642,"User confirmed SharePoint access works.","positive","file_services","2025-12-01T11:03:00Z"
+1643,"Multiple shortcuts cluttered desktop.","neutral","user_behavior","2025-12-01T11:04:00Z"
+1644,"Mailing list cleaned of invalid addresses.","positive","email_support","2025-12-01T11:05:00Z"
+1645,"Password complexity explained again.","neutral","security","2025-12-01T11:06:00Z"
+1646,"Wi‑Fi profile removed from shared tablet.","positive","security","2025-12-01T11:07:00Z"
+1647,"Could not reach manager for access approval.","negative","process","2025-12-01T11:08:00Z"
+1648,"Installed all pending Windows updates.","positive","software_update","2025-12-01T11:09:00Z"
+1649,"User joined meeting with wrong audio device.","negative","user_error","2025-12-01T11:10:00Z"
+1650,"Chat support resolved issue in one message.","positive","customer_service","2025-12-01T11:11:00Z"
+1651,"Could not print due to quota limit reached.","negative","policy","2025-12-01T11:12:00Z"
+1652,"Login script updated with new share path.","positive","os_configuration","2025-12-01T11:13:00Z"
+1653,"User asked helpful questions during call.","positive","customer_service","2025-12-01T11:14:00Z"
+1654,"Old AV agent removed before new install.","positive","security","2025-12-01T11:15:00Z"
+1655,"Could not remove file in use by process.","neutral","diagnostics","2025-12-01T11:16:00Z"
+1656,"User got clear instructions for future cases.","positive","user_training","2025-12-01T11:17:00Z"
+1657,"Network jack label did not match switch port.","negative","infrastructure","2025-12-01T11:18:00Z"
+1658,"Mouse lag removed after changing USB port.","positive","hardware_support","2025-12-01T11:19:00Z"
+1659,"Could not escalate because group not on-call.","negative","process","2025-12-01T11:20:00Z"
+1660,"Teams cache cleared and login loop fixed.","positive","remote_meetings","2025-12-01T11:21:00Z"
+1661,"User ignored initial solution article link.","negative","user_compliance","2025-12-01T11:22:00Z"
+1662,"Slow start due to many startup apps enabled.","negative","os_maintenance","2025-12-01T11:23:00Z"
+1663,"Startup list cleaned per user consent.","positive","os_maintenance","2025-12-01T11:24:00Z"
+1664,"Could not get serial number due to worn label.","neutral","asset_management","2025-12-01T11:25:00Z"
+1665,"Firewall unblock request approved quickly.","positive","security","2025-12-01T11:26:00Z"
+1666,"User thanked for staying on call late.","positive","customer_service","2025-12-01T11:27:00Z"
+1667,"Desktop background policy reapplied.","positive","policy","2025-12-01T11:28:00Z"
+1668,"Could not resolve with current logging level.","neutral","diagnostics","2025-12-01T11:29:00Z"
+1669,"OneDrive files marked always available offline.","positive","cloud_storage","2025-12-01T11:30:00Z"
+1670,"User confused about two-factor prompt.","negative","user_awareness","2025-12-01T11:31:00Z"
+1671,"MFA process explained and accepted.","positive","security","2025-12-01T11:32:00Z"
+1672,"Printer spooled jobs cleared by restart.","positive","peripheral_support","2025-12-01T11:33:00Z"
+1673,"Could not share folder due to legal hold.","neutral","policy","2025-12-01T11:34:00Z"
+1674,"User confirmed external screen quality OK.","positive","hardware_support","2025-12-01T11:35:00Z"
+1675,"Wrong ticket category used by requester.","negative","process","2025-12-01T11:36:00Z"
+1676,"Disk check scheduled for next reboot.","positive","os_maintenance","2025-12-01T11:37:00Z"
+1677,"User did not remember exact error text.","neutral","diagnostics","2025-12-01T11:38:00Z"
+1678,"Remote control allowed quick resolution.","positive","remote_support","2025-12-01T11:39:00Z"
+1679,"Could not remote in; user denied request.","negative","user_compliance","2025-12-01T11:40:00Z"
+1680,"New wallpaper applied per branding policy.","positive","policy","2025-12-01T11:41:00Z"
+1681,"User agreed to close ticket after test.","positive","customer_service","2025-12-01T11:42:00Z"
+1682,"Email forwarding disabled per guideline.","positive","security","2025-12-01T11:43:00Z"
+1683,"Could not delete folder due to long path.","neutral","file_services","2025-12-01T11:44:00Z"
+1684,"User informed of extended maintenance time.","neutral","communication","2025-12-01T11:45:00Z"
+1685,"BitLocker status checked and documented.","positive","security","2025-12-01T11:46:00Z"
+1686,"User used personal email in ticket.","negative","policy","2025-12-01T11:47:00Z"
+1687,"New distribution list created and tested.","positive","email_support","2025-12-01T11:48:00Z"
+1688,"Could not send large file via email.","negative","policy","2025-12-01T11:49:00Z"
+1689,"User guided to use file sharing service.","positive","user_training","2025-12-01T11:50:00Z"
+1690,"Printer IP changed; DNS updated.","positive","network","2025-12-01T11:51:00Z"
+1691,"Could not verify patch on powered-off PC.","neutral","software_update","2025-12-01T11:52:00Z"
+1692,"User confirmed access to HR portal now works.","positive","identity_access","2025-12-01T11:53:00Z"
+1693,"Monitor stand missing from delivery.","negative","inventory","2025-12-01T11:54:00Z"
+1694,"User happy with clearer font size settings.","positive","accessibility","2025-12-01T11:55:00Z"
+1695,"Could not reproduce crash with test account.","neutral","diagnostics","2025-12-01T11:56:00Z"
+1696,"Old profile folders removed to free space.","positive","os_maintenance","2025-12-01T11:57:00Z"
+1697,"User forgot to plug in ethernet cable.","negative","user_error","2025-12-01T11:58:00Z"
+1698,"LAN connection stable after cable insert.","positive","network","2025-12-01T11:59:00Z"
+1699,"Could not find device due to wrong hostname.","negative","documentation","2025-12-01T12:00:00Z"

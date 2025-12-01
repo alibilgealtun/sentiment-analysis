@@ -1,0 +1,274 @@
+{
+  "Naive Bayes - Technician Feedback": {
+    "model_type": "Naive Bayes",
+    "dataset_name": "Technician Feedback",
+    "model_path": "models/naive_bayes_technician_feedback.joblib",
+    "vectorizer_path": "models/tfidf_vectorizer_technician_feedback.joblib",
+    "metrics": {
+      "accuracy": 0.804416403785489,
+      "precision": 0.8125706870103351,
+      "recall": 0.804416403785489,
+      "f1_score": 0.7973226251437155
+    },
+    "text_column": "text",
+    "label_column": "label",
+    "dataset_path": "data/technician_feedback.csv",
+    "trained_at": "2025-12-01T18:21:06.853473",
+    "display_name": "Naive Bayes - Technician Feedback"
+  },
+  "SVM - Technician Feedback": {
+    "model_type": "SVM",
+    "dataset_name": "Technician Feedback",
+    "model_path": "models/svm_technician_feedback.joblib",
+    "vectorizer_path": "models/tfidf_vectorizer_technician_feedback.joblib",
+    "metrics": {
+      "accuracy": 0.8107255520504731,
+      "precision": 0.8092992734201434,
+      "recall": 0.8107255520504731,
+      "f1_score": 0.8096138221374539
+    },
+    "text_column": "text",
+    "label_column": "label",
+    "dataset_path": "data/technician_feedback.csv",
+    "trained_at": "2025-12-01T18:21:06.896553",
+    "display_name": "SVM - Technician Feedback"
+  },
+  "Logistic Regression - Technician Feedback": {
+    "model_type": "Logistic Regression",
+    "dataset_name": "Technician Feedback",
+    "model_path": "models/logistic_regression_technician_feedback.joblib",
+    "vectorizer_path": "models/tfidf_vectorizer_technician_feedback.joblib",
+    "metrics": {
+      "accuracy": 0.8138801261829653,
+      "precision": 0.8169427010121015,
+      "recall": 0.8138801261829653,
+      "f1_score": 0.8076129631498219
+    },
+    "text_column": "text",
+    "label_column": "label",
+    "dataset_path": "data/technician_feedback.csv",
+    "trained_at": "2025-12-01T18:21:06.919571",
+    "display_name": "Logistic Regression - Technician Feedback"
+  },
+  "Random Forest - Technician Feedback": {
+    "model_type": "Random Forest",
+    "dataset_name": "Technician Feedback",
+    "model_path": "models/random_forest_technician_feedback.joblib",
+    "vectorizer_path": "models/tfidf_vectorizer_technician_feedback.joblib",
+    "metrics": {
+      "accuracy": 0.7886435331230284,
+      "precision": 0.7925389542108785,
+      "recall": 0.7886435331230284,
+      "f1_score": 0.7857552071192886
+    },
+    "text_column": "text",
+    "label_column": "label",
+    "dataset_path": "data/technician_feedback.csv",
+    "trained_at": "2025-12-01T18:21:07.111400",
+    "display_name": "Random Forest - Technician Feedback"
+  },
+  "Naive Bayes - Turkish Sentiment": {
+    "model_type": "Naive Bayes",
+    "dataset_name": "Turkish Sentiment",
+    "model_path": "models/naive_bayes_turkish_sentiment.joblib",
+    "vectorizer_path": "models/tfidf_vectorizer_turkish_sentiment.joblib",
+    "metrics": {
+      "accuracy": 0.8929424273587702,
+      "precision": 0.8891505840485956,
+      "recall": 0.8929424273587702,
+      "f1_score": 0.8905783468518393
+    },
+    "text_column": "text",
+    "label_column": "label",
+    "dataset_path": "data/turkish_sentiment_train.csv",
+    "trained_at": "2025-12-01T19:21:47.201712",
+    "display_name": "Naive Bayes - Turkish Sentiment"
+  },
+  "SVM - Turkish Sentiment": {
+    "model_type": "SVM",
+    "dataset_name": "Turkish Sentiment",
+    "model_path": "models/svm_turkish_sentiment.joblib",
+    "vectorizer_path": "models/tfidf_vectorizer_turkish_sentiment.joblib",
+    "metrics": {
+      "accuracy": 0.9197329661327152,
+      "precision": 0.9165214096142406,
+      "recall": 0.9197329661327152,
+      "f1_score": 0.9162206026232362
+    },
+    "text_column": "text",
+    "label_column": "label",
+    "dataset_path": "data/turkish_sentiment_train.csv",
+    "trained_at": "2025-12-01T19:21:51.530750",
+    "display_name": "SVM - Turkish Sentiment"
+  },
+  "Logistic Regression - Turkish Sentiment": {
+    "model_type": "Logistic Regression",
+    "dataset_name": "Turkish Sentiment",
+    "model_path": "models/logistic_regression_turkish_sentiment.joblib",
+    "vectorizer_path": "models/tfidf_vectorizer_turkish_sentiment.joblib",
+    "metrics": {
+      "accuracy": 0.9202384479963744,
+      "precision": 0.9170832163486737,
+      "recall": 0.9202384479963744,
+      "f1_score": 0.9171096801711583
+    },
+    "text_column": "text",
+    "label_column": "label",
+    "dataset_path": "data/turkish_sentiment_train.csv",
+    "trained_at": "2025-12-01T19:21:54.981453",
+    "display_name": "Logistic Regression - Turkish Sentiment"
+  },
+  "Random Forest - Turkish Sentiment": {
+    "model_type": "Random Forest",
+    "dataset_name": "Turkish Sentiment",
+    "model_path": "models/random_forest_turkish_sentiment.joblib",
+    "vectorizer_path": "models/tfidf_vectorizer_turkish_sentiment.joblib",
+    "metrics": {
+      "accuracy": 0.9087169475867599,
+      "precision": 0.904660383505207,
+      "recall": 0.9087169475867599,
+      "f1_score": 0.9025933316739717
+    },
+    "text_column": "text",
+    "label_column": "label",
+    "dataset_path": "data/turkish_sentiment_train.csv",
+    "trained_at": "2025-12-01T19:23:41.181010",
+    "display_name": "Random Forest - Turkish Sentiment"
+  },
+  "Naive Bayes - tech": {
+    "model_type": "Naive Bayes",
+    "dataset_name": "tech",
+    "model_path": "models/naive_bayes_tech.joblib",
+    "vectorizer_path": "models/tfidf_vectorizer_tech.joblib",
+    "metrics": {
+      "accuracy": 0.804416403785489,
+      "precision": 0.8125706870103351,
+      "recall": 0.804416403785489,
+      "f1_score": 0.7973226251437155
+    },
+    "text_column": "text",
+    "label_column": "label",
+    "dataset_path": "data/technician_feedback.csv",
+    "trained_at": "2025-12-01T19:52:35.387607",
+    "display_name": "Naive Bayes - tech"
+  },
+  "SVM - tech": {
+    "model_type": "SVM",
+    "dataset_name": "tech",
+    "model_path": "models/svm_tech.joblib",
+    "vectorizer_path": "models/tfidf_vectorizer_tech.joblib",
+    "metrics": {
+      "accuracy": 0.8107255520504731,
+      "precision": 0.8092992734201434,
+      "recall": 0.8107255520504731,
+      "f1_score": 0.8096138221374539
+    },
+    "text_column": "text",
+    "label_column": "label",
+    "dataset_path": "data/technician_feedback.csv",
+    "trained_at": "2025-12-01T19:52:35.434547",
+    "display_name": "SVM - tech"
+  },
+  "Logistic Regression - tech": {
+    "model_type": "Logistic Regression",
+    "dataset_name": "tech",
+    "model_path": "models/logistic_regression_tech.joblib",
+    "vectorizer_path": "models/tfidf_vectorizer_tech.joblib",
+    "metrics": {
+      "accuracy": 0.8138801261829653,
+      "precision": 0.8169427010121015,
+      "recall": 0.8138801261829653,
+      "f1_score": 0.8076129631498219
+    },
+    "text_column": "text",
+    "label_column": "label",
+    "dataset_path": "data/technician_feedback.csv",
+    "trained_at": "2025-12-01T19:52:35.457443",
+    "display_name": "Logistic Regression - tech"
+  },
+  "Random Forest - tech": {
+    "model_type": "Random Forest",
+    "dataset_name": "tech",
+    "model_path": "models/random_forest_tech.joblib",
+    "vectorizer_path": "models/tfidf_vectorizer_tech.joblib",
+    "metrics": {
+      "accuracy": 0.7886435331230284,
+      "precision": 0.7925389542108785,
+      "recall": 0.7886435331230284,
+      "f1_score": 0.7857552071192886
+    },
+    "text_column": "text",
+    "label_column": "label",
+    "dataset_path": "data/technician_feedback.csv",
+    "trained_at": "2025-12-01T19:52:35.681371",
+    "display_name": "Random Forest - tech"
+  },
+  "Naive Bayes - technician_feedback": {
+    "model_type": "Naive Bayes",
+    "dataset_name": "technician_feedback",
+    "model_path": "models/naive_bayes_technician_feedback.joblib",
+    "vectorizer_path": "models/tfidf_vectorizer_technician_feedback.joblib",
+    "metrics": {
+      "accuracy": 0.804416403785489,
+      "precision": 0.8125706870103351,
+      "recall": 0.804416403785489,
+      "f1_score": 0.7973226251437155
+    },
+    "text_column": "text",
+    "label_column": "label",
+    "dataset_path": "data/technician_feedback.csv",
+    "trained_at": "2025-12-01T19:58:32.034406",
+    "display_name": "Naive Bayes - technician_feedback"
+  },
+  "SVM - technician_feedback": {
+    "model_type": "SVM",
+    "dataset_name": "technician_feedback",
+    "model_path": "models/svm_technician_feedback.joblib",
+    "vectorizer_path": "models/tfidf_vectorizer_technician_feedback.joblib",
+    "metrics": {
+      "accuracy": 0.8107255520504731,
+      "precision": 0.8092992734201434,
+      "recall": 0.8107255520504731,
+      "f1_score": 0.8096138221374539
+    },
+    "text_column": "text",
+    "label_column": "label",
+    "dataset_path": "data/technician_feedback.csv",
+    "trained_at": "2025-12-01T19:58:32.072251",
+    "display_name": "SVM - technician_feedback"
+  },
+  "Logistic Regression - technician_feedback": {
+    "model_type": "Logistic Regression",
+    "dataset_name": "technician_feedback",
+    "model_path": "models/logistic_regression_technician_feedback.joblib",
+    "vectorizer_path": "models/tfidf_vectorizer_technician_feedback.joblib",
+    "metrics": {
+      "accuracy": 0.8138801261829653,
+      "precision": 0.8169427010121015,
+      "recall": 0.8138801261829653,
+      "f1_score": 0.8076129631498219
+    },
+    "text_column": "text",
+    "label_column": "label",
+    "dataset_path": "data/technician_feedback.csv",
+    "trained_at": "2025-12-01T19:58:32.092378",
+    "display_name": "Logistic Regression - technician_feedback"
+  },
+  "Random Forest - technician_feedback": {
+    "model_type": "Random Forest",
+    "dataset_name": "technician_feedback",
+    "model_path": "models/random_forest_technician_feedback.joblib",
+    "vectorizer_path": "models/tfidf_vectorizer_technician_feedback.joblib",
+    "metrics": {
+      "accuracy": 0.7886435331230284,
+      "precision": 0.7925389542108785,
+      "recall": 0.7886435331230284,
+      "f1_score": 0.7857552071192886
+    },
+    "text_column": "text",
+    "label_column": "label",
+    "dataset_path": "data/technician_feedback.csv",
+    "trained_at": "2025-12-01T19:58:32.302552",
+    "display_name": "Random Forest - technician_feedback"
+  }
+}

@@ -44,6 +44,7 @@ from src.utils import (
     print_section_header,
     ensure_directory
 )
+from src.model_registry import ModelRegistry
 
 
 def main():
@@ -51,7 +52,7 @@ def main():
     # Parse command-line arguments
     parser = argparse.ArgumentParser(description='Train sentiment analysis models')
     parser.add_argument(
-        '--data-path',
+        '--dataset',
         type=str,
         default='data/technician_feedback.csv',
         help='Path to the CSV file containing the dataset'
@@ -79,6 +80,12 @@ def main():
         help='Name of the label column in the CSV file'
     )
     parser.add_argument(
+        '--model-name',
+        type=str,
+        default='Default',
+        help='Name identifier for the trained models'
+    )
+    parser.add_argument(
         '--generate',
         action='store_true',
         help='Generate default dataset if file not found'
@@ -88,6 +95,9 @@ def main():
 
     train_path = args.train_data_path or args.data_path
     test_path = args.test_data_path
+
+    # Create safe filename from model name
+    safe_model_name = args.model_name.replace(' ', '_').replace('-', '_').lower()
 
     # Set random seeds for reproducibility
     set_random_seeds(42)
@@ -130,14 +140,15 @@ def main():
     processed_texts = preprocessor.preprocess_batch(texts)
     print(f"Preprocessed {len(processed_texts)} texts")
     
-    # Step 3: Feature extraction
+    # Step 3: Extract features
     print("\nStep 3: Extracting features...")
     tfidf = TFIDFExtractor(max_features=5000, ngram_range=(1, 2), min_df=2)
     X = tfidf.fit_transform(processed_texts)
     print(f"Feature matrix shape: {X.shape}")
     
-    # Save vectorizer
-    save_model(tfidf.vectorizer, 'models/tfidf_vectorizer.joblib')
+    # Save vectorizer with dataset name
+    vectorizer_path = f'models/tfidf_vectorizer_{safe_model_name}.joblib'
+    save_model(tfidf.vectorizer, vectorizer_path)
 
     if test_path:
         if not os.path.exists(test_path):
@@ -174,7 +185,8 @@ def main():
     }
     
     results = {}
-    
+    registry = ModelRegistry()
+
     for name, model in models.items():
         print(f"\nTraining {name}...")
         model.fit(X_train, y_train)
@@ -188,13 +200,27 @@ def main():
         print(f"  F1-Score: {metrics['f1_score']:.4f}")
         if test_path:
             print("  Evaluation used external test dataset")
-        # Save model
+
+        # Save model with dataset name
         model_filename = name.lower().replace(' ', '_')
-        model.save(f'models/{model_filename}_model.joblib')
-    
+        model_path = f'models/{model_filename}_{safe_model_name}.joblib'
+        model.save(model_path)
+
+        # Register model in registry
+        registry.register_model(
+            model_type=name,
+            dataset_name=args.model_name,
+            model_path=model_path,
+            vectorizer_path=vectorizer_path,
+            metrics=metrics,
+            text_column=args.text_col,
+            label_column=args.label_col,
+            dataset_path=train_path
+        )
+
     # Step 6: Print results summary
     print_section_header("Results Summary")
-    
+
     print("\nModel Performance Comparison:")
     print("-" * 50)
     print(f"{'Model':<25} {'Accuracy':<12} {'F1-Score':<12}")
@@ -209,10 +235,17 @@ def main():
     best_model = max(results.items(), key=lambda x: x[1]['f1_score'])
     print(f"\nBest Model: {best_model[0]} (F1-Score: {best_model[1]['f1_score']:.4f})")
     
-    # Save results
+    # Save results with dataset name
     results_df = pd.DataFrame(results).T
-    results_df.to_csv('models/model_results.csv')
-    print("\nResults saved to models/model_results.csv")
+    results_csv_path = f'models/model_results_{safe_model_name}.csv'
+    results_df.to_csv(results_csv_path)
+    print(f"\nResults saved to {results_csv_path}")
+
+    # Print registry summary
+    print("\n" + "=" * 60)
+    print(f"✅ All models trained and registered for: {args.model_name}")
+    print("=" * 60)
+    registry.print_summary()
     if test_path:
         print("Test metrics reflect external dataset inputs.")
 

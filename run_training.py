@@ -78,6 +78,12 @@ Examples:
     )
 
     parser.add_argument(
+        '--model-name',
+        type=str,
+        help='Custom name for the trained models (e.g., "Technician_Feedback", "Turkish_Sentiment")'
+    )
+
+    parser.add_argument(
         '--generate',
         action='store_true',
         help='Generate default dataset if file not found'
@@ -113,13 +119,23 @@ Examples:
     print(f"🏷️  Label column: {args.label_col}")
     print()
 
+    # Auto-generate model name if not provided
+    model_name = args.model_name
+    if not model_name:
+        # Extract dataset name from path (remove .csv extension)
+        dataset_basename = os.path.basename(train_dataset)
+        model_name = os.path.splitext(dataset_basename)[0]
+
+    print(f"🏷️  Model name: {model_name}")
+
     # Build training command
     train_cmd = [
         sys.executable,
         'scripts/train_models.py',
         '--train-data-path', train_dataset,
         '--text-col', args.text_col,
-        '--label-col', args.label_col
+        '--label-col', args.label_col,
+        '--model-name', model_name
     ]
 
     if test_dataset:

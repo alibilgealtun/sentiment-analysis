@@ -22,8 +22,8 @@ def load_data(
     encoding: str = 'utf-8'
 ) -> Tuple[pd.DataFrame, np.ndarray, np.ndarray]:
     """
-    Load data from a CSV file.
-    
+    Load data from a CSV file with robust error handling for malformed CSV.
+
     Parameters
     ----------
     filepath : str
@@ -45,19 +45,67 @@ def load_data(
     >>> df, texts, labels = load_data('data/technician_feedback.csv')
     >>> print(f"Loaded {len(texts)} samples")
     """
-    df = pd.read_csv(filepath, encoding=encoding)
-    
+    # Try standard reading first
+    try:
+        df = pd.read_csv(filepath, encoding=encoding)
+    except pd.errors.ParserError:
+        print("⚠️  CSV parsing error detected. Using robust parser...")
+        # Use Python engine with error handling for malformed CSV
+        try:
+            df = pd.read_csv(
+                filepath,
+                encoding=encoding,
+                engine='python',
+                on_bad_lines='skip'
+            )
+            print(f"✅ Successfully parsed with error recovery")
+        except:
+            # Last resort: manual parsing
+            print("⚠️  Attempting manual parsing...")
+            import csv
+            rows = []
+            with open(filepath, 'r', encoding=encoding) as f:
+                reader = csv.reader(f)
+                header = next(reader)
+                for row in reader:
+                    if len(row) >= len(header):
+                        # If too many fields, merge extra fields into text column
+                        rows.append(row[:len(header)])
+                    elif len(row) > 0:
+                        rows.append(row)
+            df = pd.DataFrame(rows, columns=header)
+            print(f"✅ Manual parsing completed")
+
     if text_column not in df.columns:
-        raise ValueError(f"Text column '{text_column}' not found in dataset")
+        available_cols = ', '.join(df.columns)
+        raise ValueError(f"Text column '{text_column}' not found in dataset. Available columns: {available_cols}")
     if label_column not in df.columns:
-        raise ValueError(f"Label column '{label_column}' not found in dataset")
-    
+        available_cols = ', '.join(df.columns)
+        raise ValueError(f"Label column '{label_column}' not found in dataset. Available columns: {available_cols}")
+
+    # Remove any rows with missing values in key columns
+    initial_len = len(df)
+    df = df.dropna(subset=[text_column, label_column])
+    if len(df) < initial_len:
+        print(f"⚠️  Removed {initial_len - len(df)} rows with missing values")
+
+    # Normalize labels (lowercase) and filter valid sentiment labels
+    df[label_column] = df[label_column].astype(str).str.lower().str.strip()
+
+    # Filter to only valid sentiment labels
+    valid_labels = ['positive', 'negative', 'neutral']
+    initial_len = len(df)
+    df = df[df[label_column].isin(valid_labels)]
+    if len(df) < initial_len:
+        removed = initial_len - len(df)
+        print(f"⚠️  Removed {removed} rows with invalid labels (keeping only: {', '.join(valid_labels)})")
+
     texts = df[text_column].values
     labels = df[label_column].values
     
-    print(f"Loaded {len(texts)} samples from {filepath}")
-    print(f"Label distribution:\n{df[label_column].value_counts()}")
-    
+    print(f"✅ Loaded {len(texts)} samples from {filepath}")
+    print(f"📊 Label distribution:\n{df[label_column].value_counts()}")
+
     return df, texts, labels
 
 

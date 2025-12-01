@@ -33,7 +33,7 @@ import joblib
 
 # Import project modules
 from src.preprocessing import TextPreprocessor
-from src.utils import load_model
+from src.model_registry import ModelRegistry
 
 
 # Page configuration
@@ -74,28 +74,45 @@ st.markdown("""
 
 @st.cache_resource
 def load_models():
-    """Load all trained models and vectorizer."""
+    """Load all trained models from the Model Registry."""
     models = {}
-    vectorizer = None
-    
-    model_files = {
-        'Naive Bayes': 'models/naive_bayes_model.joblib',
-        'SVM': 'models/svm_model.joblib',
-        'Logistic Regression': 'models/logistic_regression_model.joblib',
-        'Random Forest': 'models/random_forest_model.joblib'
-    }
-    
-    for name, filepath in model_files.items():
-        if os.path.exists(filepath):
+
+    # Load model registry
+    registry = ModelRegistry()
+    all_models = registry.get_all_models()
+
+    if not all_models:
+        st.warning("No models found in registry. Please train models first.")
+        return models
+
+    # Load each registered model
+    for display_name, model_info in all_models.items():
+        model_path = model_info['model_path']
+        vectorizer_path = model_info['vectorizer_path']
+
+        # Check if files exist
+        if os.path.exists(model_path) and os.path.exists(vectorizer_path):
             try:
-                models[name] = load_model(filepath)
+                # Load model and vectorizer
+                model_obj = joblib.load(model_path)
+                vectorizer = joblib.load(vectorizer_path)
+
+                models[display_name] = {
+                    'model': model_obj,
+                    'vectorizer': vectorizer,
+                    'info': model_info
+                }
             except Exception as e:
-                st.warning(f"Could not load {name}: {e}")
-    
-    if os.path.exists('models/tfidf_vectorizer.joblib'):
-        vectorizer = joblib.load('models/tfidf_vectorizer.joblib')
-    
-    return models, vectorizer
+                st.warning(f"Could not load {display_name}: {e}")
+        else:
+            missing = []
+            if not os.path.exists(model_path):
+                missing.append(f"model ({model_path})")
+            if not os.path.exists(vectorizer_path):
+                missing.append(f"vectorizer ({vectorizer_path})")
+            st.warning(f"Files not found for {display_name}: {', '.join(missing)}")
+
+    return models
 
 
 @st.cache_resource
@@ -110,25 +127,50 @@ def load_preprocessor():
     )
 
 
-def predict_sentiment(text, model_data, vectorizer, preprocessor):
+def predict_sentiment(text, model_data, preprocessor):
     """Predict sentiment for a single text."""
     # Preprocess
     processed_text = preprocessor.full_preprocess(text)
     
+    # Get model and vectorizer from the model_data dictionary
+    model_obj = model_data['model']
+    vectorizer = model_data['vectorizer']
+
     # Transform
     X = vectorizer.transform([processed_text])
     
-    # Predict
-    model = model_data['model']
-    label_encoder = model_data['label_encoder']
+    # The model_obj is a dictionary saved by our custom classifiers
+    # It has keys: 'model', 'label_encoder', 'classes_', 'is_fitted'
+    if isinstance(model_obj, dict):
+        # Extract the actual sklearn model and label encoder
+        model = model_obj['model']
+        label_encoder = model_obj['label_encoder']
+        classes = label_encoder.classes_
+        
+        # Make prediction
+        y_pred_encoded = model.predict(X)
+        y_pred = label_encoder.inverse_transform(y_pred_encoded)[0]
+        
+        # Get probabilities
+        y_proba = model.predict_proba(X)[0]
+    elif hasattr(model_obj, 'model'):
+        # Custom wrapper class (e.g., from src.models) - fallback
+        model = model_obj.model
+        label_encoder = model_obj.label_encoder
+        classes = label_encoder.classes_
+        
+        y_pred_encoded = model.predict(X)
+        y_pred = label_encoder.inverse_transform(y_pred_encoded)[0]
+        y_proba = model.predict_proba(X)[0]
+    else:
+        # Direct sklearn model - fallback
+        model = model_obj
+        classes = model.classes_
+        
+        y_pred = model.predict(X)[0]
+        y_proba = model.predict_proba(X)[0]
     
-    y_pred_encoded = model.predict(X)
-    y_pred = label_encoder.inverse_transform(y_pred_encoded)[0]
-    
-    # Get probabilities
-    y_proba = model.predict_proba(X)[0]
-    
-    return y_pred, y_proba, label_encoder.classes_
+    return y_pred, y_proba, classes
 
 
 def create_probability_chart(probabilities, classes):
@@ -191,67 +233,48 @@ def main():
     st.markdown('<p style="text-align: center; color: #7f8c8d;">Technician Feedback Classification System</p>', unsafe_allow_html=True)
     
     # Load resources
-    models, vectorizer = load_models()
+    models = load_models()
     preprocessor = load_preprocessor()
     
     # Check if models are loaded
     if not models:
-        st.error("⚠️ No trained models found. Please run `python scripts/train_models.py` first.")
-        st.stop()
-    
-    if vectorizer is None:
-        st.error("⚠️ Vectorizer not found. Please run `python scripts/train_models.py` first.")
+        st.error("⚠️ No trained models found. Please run `python run_training.py` first.")
+        st.info("💡 To train models, run: `python run_training.py --dataset your_data.csv`")
         st.stop()
     
     # Sidebar
     st.sidebar.header("⚙️ Settings")
     
-    # Dataset selection
-    st.sidebar.markdown("### 📁 Dataset")
-
-    # List available datasets in data folder
-    data_dir = 'data'
-    available_datasets = []
-    if os.path.exists(data_dir):
-        available_datasets = [f for f in os.listdir(data_dir) if f.endswith('.csv')]
-
-    dataset_option = st.sidebar.radio(
-        "Select dataset source:",
-        ["Use existing dataset", "Upload new dataset"]
-    )
-
-    selected_dataset = None
-    uploaded_dataset = None
-
-    if dataset_option == "Use existing dataset":
-        if available_datasets:
-            selected_dataset = st.sidebar.selectbox(
-                "Choose dataset:",
-                options=available_datasets,
-                index=available_datasets.index('technician_feedback.csv') if 'technician_feedback.csv' in available_datasets else 0
-            )
-        else:
-            st.sidebar.warning("No datasets found in data/ folder")
-    else:
-        uploaded_dataset = st.sidebar.file_uploader(
-            "Upload CSV file:",
-            type=['csv'],
-            key='sidebar_upload'
-        )
-
-    st.sidebar.markdown("---")
+    # Model Selection
     st.sidebar.markdown("### 🤖 Model Selection")
+    st.sidebar.info(f"Found {len(models)} trained models")
 
     selected_model = st.sidebar.selectbox(
-        "Select Model",
+        "Choose Model:",
         options=list(models.keys()),
-        index=list(models.keys()).index('Logistic Regression') if 'Logistic Regression' in models else 0
+        help="Select a trained model from the registry"
     )
     
-    st.sidebar.markdown("---")
-    st.sidebar.markdown("### 📈 Model Info")
-    st.sidebar.info(f"**Selected Model:** {selected_model}")
-    
+    # Display model information
+    if selected_model:
+        model_info = models[selected_model]['info']
+        st.sidebar.markdown("---")
+        st.sidebar.markdown("### 📈 Model Info")
+        st.sidebar.markdown(f"**Type:** {model_info['model_type']}")
+        st.sidebar.markdown(f"**Dataset:** {model_info['dataset_name']}")
+        st.sidebar.markdown(f"**Accuracy:** {model_info['metrics']['accuracy']:.4f}")
+        st.sidebar.markdown(f"**F1-Score:** {model_info['metrics']['f1_score']:.4f}")
+
+        # Show training date
+        trained_at = model_info.get('trained_at', 'Unknown')
+        if trained_at != 'Unknown':
+            from datetime import datetime
+            try:
+                dt = datetime.fromisoformat(trained_at)
+                st.sidebar.markdown(f"**Trained:** {dt.strftime('%Y-%m-%d %H:%M')}")
+            except:
+                st.sidebar.markdown(f"**Trained:** {trained_at}")
+
     # Main content tabs
     tab1, tab2, tab3, tab4 = st.tabs([
         "🎯 Single Prediction",
@@ -279,7 +302,6 @@ def main():
                         prediction, probabilities, classes = predict_sentiment(
                             text_input,
                             models[selected_model],
-                            vectorizer,
                             preprocessor
                         )
                     
@@ -350,7 +372,6 @@ def main():
                             pred, proba, classes = predict_sentiment(
                                 str(text),
                                 models[selected_model],
-                                vectorizer,
                                 preprocessor
                             )
                             predictions.append(pred)
@@ -390,44 +411,121 @@ def main():
     with tab3:
         st.markdown('<h2 class="sub-header">Model Performance Metrics</h2>', unsafe_allow_html=True)
         
-        # Load results if available
-        if os.path.exists('models/model_results.csv'):
-            results_df = pd.read_csv('models/model_results.csv', index_col=0)
-            
+        # Create performance dataframe from registry
+        if models:
+            # Extract metrics from all loaded models
+            performance_data = []
+            for display_name, model_data in models.items():
+                info = model_data['info']
+                metrics = info['metrics']
+                performance_data.append({
+                    'Model': display_name,
+                    'Type': info['model_type'],
+                    'Dataset': info['dataset_name'],
+                    'Accuracy': metrics.get('accuracy', 0),
+                    'Precision': metrics.get('precision', 0),
+                    'Recall': metrics.get('recall', 0),
+                    'F1-Score': metrics.get('f1_score', 0)
+                })
+
+            perf_df = pd.DataFrame(performance_data)
+
+            # Filter options
+            col1, col2 = st.columns(2)
+            with col1:
+                dataset_filter = st.selectbox(
+                    'Filter by Dataset:',
+                    ['All'] + sorted(perf_df['Dataset'].unique().tolist())
+                )
+            with col2:
+                metric_sort = st.selectbox(
+                    'Sort by:',
+                    ['F1-Score', 'Accuracy', 'Precision', 'Recall']
+                )
+
+            # Apply filter
+            if dataset_filter != 'All':
+                display_df = perf_df[perf_df['Dataset'] == dataset_filter].copy()
+            else:
+                display_df = perf_df.copy()
+
+            # Sort
+            display_df = display_df.sort_values(by=metric_sort, ascending=False)
+
+            # Display table
+            st.markdown("### 📊 Performance Comparison")
             st.dataframe(
-                results_df.style.format("{:.4f}").highlight_max(axis=0, color='lightgreen'),
-                use_container_width=True
+                display_df.style.format({
+                    'Accuracy': '{:.4f}',
+                    'Precision': '{:.4f}',
+                    'Recall': '{:.4f}',
+                    'F1-Score': '{:.4f}'
+                }).background_gradient(subset=['Accuracy', 'Precision', 'Recall', 'F1-Score'], cmap='RdYlGn'),
+                use_container_width=True,
+                hide_index=True
             )
             
-            # Bar chart comparison
-            fig = px.bar(
-                results_df.reset_index().melt(id_vars='index', var_name='Metric', value_name='Score'),
-                x='index',
-                y='Score',
-                color='Metric',
+            # Visualization
+            st.markdown("### 📈 Visual Comparison")
+
+            # Create comparison chart
+            metrics_to_plot = ['Accuracy', 'Precision', 'Recall', 'F1-Score']
+            fig = go.Figure()
+
+            for metric in metrics_to_plot:
+                fig.add_trace(go.Bar(
+                    name=metric,
+                    x=display_df['Model'],
+                    y=display_df[metric],
+                    text=display_df[metric].apply(lambda x: f'{x:.3f}'),
+                    textposition='auto'
+                ))
+
+            fig.update_layout(
                 barmode='group',
-                title='Model Comparison',
-                labels={'index': 'Model'}
+                title=f'Model Performance Comparison{" - " + dataset_filter if dataset_filter != "All" else ""}',
+                xaxis_title='Model',
+                yaxis_title='Score',
+                yaxis_range=[0, 1],
+                height=500,
+                showlegend=True
             )
+
             st.plotly_chart(fig, use_container_width=True)
+
+            # Best model highlight
+            best_model_idx = display_df[metric_sort].idxmax()
+            best_model = display_df.loc[best_model_idx]
+
+            st.markdown("### 🏆 Best Model")
+            col1, col2, col3, col4 = st.columns(4)
+            with col1:
+                st.metric("Model", best_model['Type'])
+            with col2:
+                st.metric("Dataset", best_model['Dataset'])
+            with col3:
+                st.metric(metric_sort, f"{best_model[metric_sort]:.4f}")
+            with col4:
+                st.metric("Overall F1", f"{best_model['F1-Score']:.4f}")
+
         else:
-            st.info("No model results found. Train models first using `python scripts/train_models.py`")
-    
+            st.info("No model performance data available. Train models first using `python run_training.py`")
+
     # Tab 4: Word Cloud
     with tab4:
         st.markdown('<h2 class="sub-header">Interactive Word Cloud</h2>', unsafe_allow_html=True)
-        
-        # Determine which dataset to use
-        df_wordcloud = None
+        st.info("Upload a CSV file to generate word clouds from your data")
 
-        if dataset_option == "Use existing dataset" and selected_dataset:
-            dataset_path = os.path.join(data_dir, selected_dataset)
-            if os.path.exists(dataset_path):
-                df_wordcloud = pd.read_csv(dataset_path)
-        elif dataset_option == "Upload new dataset" and uploaded_dataset:
-            df_wordcloud = pd.read_csv(uploaded_dataset)
+        # Upload dataset for word cloud
+        wordcloud_file = st.file_uploader(
+            "Upload CSV file for word cloud visualization:",
+            type=['csv'],
+            key='wordcloud_upload'
+        )
 
-        if df_wordcloud is not None:
+        if wordcloud_file is not None:
+            df_wordcloud = pd.read_csv(wordcloud_file)
+
             # Auto-detect text and sentiment columns
             text_col = None
             sentiment_col = None
@@ -479,16 +577,13 @@ def main():
                     plt.close(fig)
             else:
                 st.error("Could not find text column. Please ensure your dataset has a column named 'feedback_text', 'text', or similar.")
-        else:
-            st.info("Please select or upload a dataset to generate word cloud.")
 
     # Footer
     st.markdown("---")
     st.markdown(
         """
         <div style="text-align: center; color: #7f8c8d;">
-            <p>Built with ❤️ for Technician Feedback Analysis</p>
-            <p>© 2024 Sentiment Analysis Team</p>
+            <p>Built by Group 13</p>
         </div>
         """,
         unsafe_allow_html=True

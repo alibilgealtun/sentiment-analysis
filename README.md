@@ -152,12 +152,13 @@ streamlit run app/streamlit_app.py
 ```
 
 Features:
-- **Dataset selection**: Choose from available datasets or upload your own
+- **Model selection**: Choose from different trained models (each trained on different datasets)
 - Real-time sentiment prediction
-- Model selection dropdown
 - Batch prediction (CSV upload)
-- Interactive word clouds
+- Interactive word clouds (with uploaded data)
 - Performance metrics display
+
+**Note**: The app uses pre-trained models. Each model can be trained on different datasets separately using the training scripts. Simply select the model you want to use from the sidebar dropdown.
 
 ### 5. Jupyter Notebook
 
