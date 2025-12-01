@@ -74,43 +74,120 @@ st.markdown("""
 
 @st.cache_resource
 def load_models():
-    """Load all trained models from the Model Registry."""
+    """Load all trained models that currently exist in the models/ directory.
+
+    Behavior:
+    - Reads metadata from ModelRegistry (models/model_registry.json).
+    - Only keeps entries whose model & vectorizer files actually exist under models/.
+    - Deduplicates models that point to the same underlying artifacts so each
+      model appears only once in the UI.
+    - Silently skips missing/broken entries so deleting a .joblib from models/
+      effectively removes that model from the UI.
+    """
     models = {}
 
-    # Load model registry
+    # Ensure we only work with artifacts under the top-level models/ directory
+    MODELS_DIR = os.path.join(project_root, "models")
+
+    # Load model registry metadata (model_type, metrics, etc.)
     registry = ModelRegistry()
-    all_models = registry.get_all_models()
+    all_models = registry.get_all_models() or {}
 
     if not all_models:
         st.warning("No models found in registry. Please train models first.")
         return models
 
-    # Load each registered model
+    # Temporary structure to avoid duplicates: key by actual artifact paths
+    # (model_path, vectorizer_path) so that logically identical models
+    # registered with slightly different dataset names (e.g. 'tech' vs
+    # 'Technician Feedback') only show once.
+    dedup_index: dict[tuple[str, str], dict] = {}
+
     for display_name, model_info in all_models.items():
-        model_path = model_info['model_path']
-        vectorizer_path = model_info['vectorizer_path']
+        # Resolve paths relative to project root to avoid any confusion
+        raw_model_path = model_info.get("model_path", "")
+        raw_vectorizer_path = model_info.get("vectorizer_path", "")
 
-        # Check if files exist
-        if os.path.exists(model_path) and os.path.exists(vectorizer_path):
+        # Normalize to absolute paths
+        model_path = os.path.join(project_root, raw_model_path) if raw_model_path else None
+        vectorizer_path = os.path.join(project_root, raw_vectorizer_path) if raw_vectorizer_path else None
+
+        # Only consider models that live under the top-level models/ directory
+        def is_under_models_dir(path: str | None) -> bool:
+            if not path:
+                return False
             try:
-                # Load model and vectorizer
-                model_obj = joblib.load(model_path)
-                vectorizer = joblib.load(vectorizer_path)
+                return os.path.commonpath([MODELS_DIR, os.path.abspath(path)]) == MODELS_DIR
+            except Exception:
+                return False
 
-                models[display_name] = {
-                    'model': model_obj,
-                    'vectorizer': vectorizer,
-                    'info': model_info
-                }
-            except Exception as e:
-                st.warning(f"Could not load {display_name}: {e}")
-        else:
-            missing = []
-            if not os.path.exists(model_path):
-                missing.append(f"model ({model_path})")
-            if not os.path.exists(vectorizer_path):
-                missing.append(f"vectorizer ({vectorizer_path})")
-            st.warning(f"Files not found for {display_name}: {', '.join(missing)}")
+        if not (is_under_models_dir(model_path) and is_under_models_dir(vectorizer_path)):
+            continue
+
+        # Check that the files still exist; if the user deleted them, we simply
+        # skip this entry so it won't show up in the UI.
+        if not (os.path.exists(model_path) and os.path.exists(vectorizer_path)):
+            continue
+
+        # Build a canonical key based on actual artifact paths
+        key = (os.path.abspath(model_path), os.path.abspath(vectorizer_path))
+
+        # If we already have an entry for this artifact pair, decide which
+        # metadata to keep. Prefer a more user-friendly dataset name if
+        # available (e.g., 'Technician Feedback' over 'tech' or
+        # 'technician_feedback').
+        existing = dedup_index.get(key)
+        if existing is not None:
+            existing_info = existing["info"]
+            existing_dataset = str(existing_info.get("dataset_name", ""))
+            new_dataset = str(model_info.get("dataset_name", ""))
+
+            def score_dataset(name: str) -> int:
+                # Heuristic: penalise lowercased/slug-like names so that
+                # 'Technician Feedback' wins over 'tech' or 'technician_feedback'.
+                if not name:
+                    return 0
+                if name.islower() and ("_" in name or "-" in name):
+                    return 1
+                if name.islower():
+                    return 2
+                # Mixed / title case looks nicer
+                return 3
+
+            if score_dataset(new_dataset) > score_dataset(existing_dataset):
+                existing["info"] = model_info
+                existing["display_name"] = display_name
+            # Either way, we don't add a second logical model for the same
+            # artifact pair.
+            continue
+
+        # First time we see this artifact pair: store metadata only for now.
+        dedup_index[key] = {
+            "display_name": display_name,
+            "info": model_info,
+            "model_path": model_path,
+            "vectorizer_path": vectorizer_path,
+        }
+
+    # Now actually load the unique models
+    for entry in dedup_index.values():
+        display_name = entry["display_name"]
+        model_info = entry["info"]
+        model_path = entry["model_path"]
+        vectorizer_path = entry["vectorizer_path"]
+
+        try:
+            model_obj = joblib.load(model_path)
+            vectorizer = joblib.load(vectorizer_path)
+        except Exception as e:
+            st.warning(f"Could not load {display_name}: {e}")
+            continue
+
+        models[display_name] = {
+            "model": model_obj,
+            "vectorizer": vectorizer,
+            "info": model_info,
+        }
 
     return models
 
